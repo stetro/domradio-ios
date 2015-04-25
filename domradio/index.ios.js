@@ -2,14 +2,14 @@
 
 var React = require('react-native');
 var { DomradioPlayer } = require('./app/components/DomradioPlayer');
-var { DomradioNavigation } = require('./app/components/DomradioNavigation');
 var { DomradioNews } = require('./app/components/DomradioNews');
 
 var {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NavigatorIOS
 } = React;
 
 var domradio = React.createClass({
@@ -17,9 +17,8 @@ var domradio = React.createClass({
     return ( <View style = {
         styles.container
      }>
-      <DomradioNavigation/>
-      <DomradioNews/>
-      <DomradioPlayer/>
+      <NavigatorIOS style={styles.navigation} initialRoute={{title: 'domradio.de',component: DomradioNews}}/>
+      <DomradioPlayer style={styles.player}/>
       </View>
     );
   }
@@ -29,6 +28,12 @@ var styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EEEEEE',
+  },
+  navigation:{
+    flex: 1
+  },
+  player:{
+    flex: 1
   }
 });
 
