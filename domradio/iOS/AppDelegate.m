@@ -13,6 +13,16 @@
 
 @implementation AppDelegate
 
+- (void)updateNavigationBarStyle
+{
+  UIColor *domradioColor = [UIColor colorWithRed:0.671 green:0.235 blue:0.176 alpha:1]; /*#ab3c2d*/
+  
+  [[UINavigationBar appearance] setBarTintColor: domradioColor];
+  [[UINavigationBar appearance] setTranslucent: false];
+  [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+  [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
@@ -29,16 +39,7 @@
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   
-  UIColor *domradioColor = [UIColor colorWithRed:0.671 green:0.235 blue:0.176 alpha:1]; /*#ab3c2d*/
-  
-  [[UINavigationBar appearance] setBarTintColor: domradioColor];
-  [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-  
-  [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                         NSFontAttributeName : [UIFont fontWithName:@"AppleSDGothicNeo-SemiBold" size:22.0],
-                                                         NSForegroundColorAttributeName : [UIColor whiteColor]
-                                                         }];
-  
+  [self updateNavigationBarStyle];
   
   return YES;
 }

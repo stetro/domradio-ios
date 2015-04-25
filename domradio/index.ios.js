@@ -14,20 +14,16 @@ var {
 
 var domradio = React.createClass({
   render: function() {
-    return ( <View style = {
-        styles.container
-     }>
-      <NavigatorIOS style={styles.navigation} initialRoute={{title: 'domradio.de',component: DomradioNews}}/>
-      <DomradioPlayer style={styles.player}/>
-      </View>
-    );
+    return ( <View style = { styles.container }>
+              <NavigatorIOS style={styles.navigation} initialRoute={{title: 'domradio.de',component: DomradioNews}}/>
+              <DomradioPlayer style={styles.player}/>
+            </View> );
   }
 });
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#EEEEEE',
+    flex: 1
   },
   navigation:{
     flex: 1

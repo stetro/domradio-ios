@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "apple-touch-icon-60x60.png"
+      "filename" : "play.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "apple-touch-icon-120x120.png"
+      "filename" : "play@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "apple-touch-icon-180x180.png"
+      "filename" : "play@3x.png"
     }
   ],
   "info" : {
