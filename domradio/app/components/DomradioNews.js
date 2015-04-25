@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+var DomradioNewsRepository = require('../data/DomradioNewsRepository');
 
 var {
   AppRegistry,
@@ -23,16 +24,16 @@ var styles = StyleSheet.create({
   },
   title: {
     color: '#C63826',
-    fontSize: 21,
+    fontSize: 18,
     fontWeight: 'bold',
     paddingBottom: 5
   },
-  date: {
+  pubDate: {
     color: '#777777',
     fontSize: 14,
     paddingBottom: 5
   },
-  text: {},
+  description: {},
   more: {
     color: '#777777',
     alignSelf: 'flex-end',
@@ -45,29 +46,58 @@ var styles = StyleSheet.create({
   }
 });
 
-exports.DomradioNews = React.createClass({
+var DomradioNewsItem = React.createClass({
+  getDefaultProps:function() {
+    return {
+      title: 'Sample Title',
+      pubDate: 'Sample Date',
+      description: 'Sample Text',
+      link: 'http://domradio.de'
+    }
+  },
   render: function() {
+    return (<View>
+              <View style={styles.newsItem}>
+                <Text style={styles.title}>{this.props.title}</Text>
+                <Text style={styles.pubDate}>{this.props.pubDate}</Text>
+                <Text style={styles.description}>{this.props.description}</Text>
+                <Text style={styles.more}>Artikel lesen</Text>
+              </View>
+              <View style={styles.seperator}/>
+            </View>);
+  }
+});
+
+exports.DomradioNews = React.createClass({
+  getInitialState: function() {
+    var that = this;
+    DomradioNewsRepository.getNews(function(err, news) {
+      if (err) {
+        console.alert('News konnten nicht geladen werden!');
+      } else {
+        console.log('Updating news ...');
+        that.setState({
+          news: news
+        });
+      }
+    });
+    return {
+      news: []
+    }
+  },
+  render: function() {
+    var newsItems = this.state.news.map(function(item) {
+      console.log(item);
+      return <DomradioNewsItem 
+        title={item.title} 
+        pubDate={item.pubDate} 
+        description={item.description} 
+        link={item.link}/>
+    })
     return (<ScrollView style={ styles.news } >
-              <View style={styles.newsItem}>
-                <Text style={styles.title}>Nachrichten Titel</Text>
-                <Text style={styles.date}>21.05.2015 14:30</Text>
-                <Text style={styles.text}>lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd</Text>
-                <Text style={styles.more}>Artikel lesen</Text>
-              </View>
-              <View style={styles.seperator}/>
-              <View style={styles.newsItem}>
-                <Text style={styles.title}>Nachrichten Titel</Text>
-                <Text style={styles.date}>21.05.2015 14:30</Text>
-                <Text style={styles.text}>lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd</Text>
-                <Text style={styles.more}>Artikel lesen</Text>
-              </View>
-              <View style={styles.seperator}/>
-              <View style={styles.newsItem}>
-                <Text style={styles.title}>Nachrichten Titel</Text>
-                <Text style={styles.date}>21.05.2015 14:30</Text>
-                <Text style={styles.text}>lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd lorem aösdkjf aksdj föaskdf öaksjdf öasjdf ökashdf öas dö fasd</Text>
-                <Text style={styles.more}>Artikel lesen</Text>
-              </View>
+              {newsItems}
     				</ScrollView>);
   }
 });
+
+

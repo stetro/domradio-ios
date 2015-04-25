@@ -26,7 +26,7 @@ var styles = StyleSheet.create({
 exports.DomradioPlayer = React.createClass({
   render: function() {
     return (<View style={styles.navigation}>
-              <Image style={ styles.playButton } source={require('image!play')}/>
+              <Image style={ styles.playButton } source={{uri:'play', isStatic:true}}/>
               <Text style={ styles.text }>domradio.de Livestream</Text>
             </View>)
   }
