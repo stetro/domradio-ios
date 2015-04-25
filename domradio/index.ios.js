@@ -33,3 +33,4 @@ var styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('domradio', () => domradio);
+
