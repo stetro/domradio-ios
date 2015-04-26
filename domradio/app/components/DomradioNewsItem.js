@@ -11,15 +11,12 @@ var {
 } = React;
 
 var DomradioNewsItem = React.createClass({
-  openNews: function() {
-    LinkingIOS.openURL(this.props.link);
-  },
   render: function() {
     return (<View>
               <TouchableHighlight activeOpacity={0.6}
                   underlayColor={'white'}
-                  onPress={this.openNews}>
-                <View style={styles.newsItem} onTab={this.openNews}>
+                  onPress={this.props.openNewsDetails}>
+                <View style={styles.newsItem}>
                   <Text style={styles.title}>{this.props.title}</Text>
                   <Text style={styles.pubDate}>{this.props.pubDate}</Text>
                   <Text style={styles.description}>{this.props.description}</Text>
