@@ -23,6 +23,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		E487D5B31AED2EB200CD21EE /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5AE1AED2EB200CD21EE /* MWFeedParser.m */; };
+		E487D5B41AED2EB200CD21EE /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5B01AED2EB200CD21EE /* MWFeedInfo.m */; };
+		E487D5B51AED2EB200CD21EE /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5B21AED2EB200CD21EE /* MWFeedItem.m */; };
+		E487D5BE1AED2EC400CD21EE /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5B71AED2EC400CD21EE /* NSString+HTML.m */; };
+		E487D5BF1AED2EC400CD21EE /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5B91AED2EC400CD21EE /* NSDate+InternetDateTime.m */; };
+		E487D5C01AED2EC400CD21EE /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5BB1AED2EC400CD21EE /* GTMNSString+HTML.m */; };
+		E487D5C11AED2EC400CD21EE /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5BD1AED2EC400CD21EE /* NSString+XMLEntities.m */; };
+		E487D5C41AED2F0700CD21EE /* RSSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E487D5C31AED2F0700CD21EE /* RSSBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +135,23 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		E487D5AC1AED2EB200CD21EE /* MWFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser.h; sourceTree = "<group>"; };
+		E487D5AD1AED2EB200CD21EE /* MWFeedParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedParser_Private.h; sourceTree = "<group>"; };
+		E487D5AE1AED2EB200CD21EE /* MWFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedParser.m; sourceTree = "<group>"; };
+		E487D5AF1AED2EB200CD21EE /* MWFeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedInfo.h; sourceTree = "<group>"; };
+		E487D5B01AED2EB200CD21EE /* MWFeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedInfo.m; sourceTree = "<group>"; };
+		E487D5B11AED2EB200CD21EE /* MWFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWFeedItem.h; sourceTree = "<group>"; };
+		E487D5B21AED2EB200CD21EE /* MWFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWFeedItem.m; sourceTree = "<group>"; };
+		E487D5B61AED2EC400CD21EE /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		E487D5B71AED2EC400CD21EE /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		E487D5B81AED2EC400CD21EE /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		E487D5B91AED2EC400CD21EE /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		E487D5BA1AED2EC400CD21EE /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		E487D5BB1AED2EC400CD21EE /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		E487D5BC1AED2EC400CD21EE /* NSString+XMLEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XMLEntities.h"; sourceTree = "<group>"; };
+		E487D5BD1AED2EC400CD21EE /* NSString+XMLEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XMLEntities.m"; sourceTree = "<group>"; };
+		E487D5C21AED2F0700CD21EE /* RSSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSBridge.h; sourceTree = "<group>"; };
+		E487D5C31AED2F0700CD21EE /* RSSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +258,7 @@
 		13B07FAE1A68108700A75B9A /* domradio */ = {
 			isa = PBXGroup;
 			children = (
+				E487D5961AED2E2C00CD21EE /* Lib */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -240,6 +266,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				E487D5C21AED2F0700CD21EE /* RSSBridge.h */,
+				E487D5C31AED2F0700CD21EE /* RSSBridge.m */,
 			);
 			name = domradio;
 			sourceTree = "<group>";
@@ -304,6 +332,28 @@
 				00E356EE1AD99517003FC87E /* domradioTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E487D5961AED2E2C00CD21EE /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E487D5B61AED2EC400CD21EE /* NSString+HTML.h */,
+				E487D5B71AED2EC400CD21EE /* NSString+HTML.m */,
+				E487D5B81AED2EC400CD21EE /* NSDate+InternetDateTime.h */,
+				E487D5B91AED2EC400CD21EE /* NSDate+InternetDateTime.m */,
+				E487D5BA1AED2EC400CD21EE /* GTMNSString+HTML.h */,
+				E487D5BB1AED2EC400CD21EE /* GTMNSString+HTML.m */,
+				E487D5BC1AED2EC400CD21EE /* NSString+XMLEntities.h */,
+				E487D5BD1AED2EC400CD21EE /* NSString+XMLEntities.m */,
+				E487D5AC1AED2EB200CD21EE /* MWFeedParser.h */,
+				E487D5AD1AED2EB200CD21EE /* MWFeedParser_Private.h */,
+				E487D5AE1AED2EB200CD21EE /* MWFeedParser.m */,
+				E487D5AF1AED2EB200CD21EE /* MWFeedInfo.h */,
+				E487D5B01AED2EB200CD21EE /* MWFeedInfo.m */,
+				E487D5B11AED2EB200CD21EE /* MWFeedItem.h */,
+				E487D5B21AED2EB200CD21EE /* MWFeedItem.m */,
+			);
+			name = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +578,14 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				E487D5B51AED2EB200CD21EE /* MWFeedItem.m in Sources */,
+				E487D5C11AED2EC400CD21EE /* NSString+XMLEntities.m in Sources */,
+				E487D5BF1AED2EC400CD21EE /* NSDate+InternetDateTime.m in Sources */,
+				E487D5B31AED2EB200CD21EE /* MWFeedParser.m in Sources */,
+				E487D5C01AED2EC400CD21EE /* GTMNSString+HTML.m in Sources */,
+				E487D5BE1AED2EC400CD21EE /* NSString+HTML.m in Sources */,
+				E487D5B41AED2EB200CD21EE /* MWFeedInfo.m in Sources */,
+				E487D5C41AED2F0700CD21EE /* RSSBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,14 @@
 #define domradio_RSSBridge_h
 
 #import "RCTBridgeModule.h"
+#import "MWFeedParser.h"
 
-@interface RSSBridge : NSObject <RCTBridgeModule>
+@interface RSSBridge : NSObject <RCTBridgeModule, MWFeedParserDelegate>{
+  MWFeedParser *feedParser;
+  NSMutableArray *parsedItems;
+  RCTResponseSenderBlock responseCallback;
+}
+  -(NSDictionary*) convertToDictionary: (MWFeedItem*)item;
 @end
 
 #endif

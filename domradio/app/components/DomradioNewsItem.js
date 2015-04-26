@@ -12,7 +12,6 @@ var {
 
 var DomradioNewsItem = React.createClass({
   openNews: function() {
-    console.log('opening '+this.props.link);
     LinkingIOS.openURL(this.props.link);
   },
   render: function() {
