@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react-native');
-var { DomradioPlayer } = require('./app/components/DomradioPlayer');
-var { DomradioNews } = require('./app/components/DomradioNews');
+var DomradioPlayer = require('./app/components/DomradioPlayer');
+var DomradioNews = require('./app/components/DomradioNews');
 
 var {
   AppRegistry,

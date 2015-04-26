@@ -23,7 +23,7 @@ var styles = StyleSheet.create({
   }
 });
 
-exports.DomradioPlayer = React.createClass({
+var DomradioPlayer = React.createClass({
   render: function() {
     return (<View style={styles.navigation}>
               <Image style={ styles.playButton } source={{uri:'play', isStatic:true}}/>
@@ -31,3 +31,5 @@ exports.DomradioPlayer = React.createClass({
             </View>)
   }
 });
+
+module.exports = DomradioPlayer;

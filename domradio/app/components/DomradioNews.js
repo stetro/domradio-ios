@@ -2,102 +2,57 @@
 
 var React = require('react-native');
 var DomradioNewsRepository = require('../data/DomradioNewsRepository');
+var DomradioNewsItem = require('../components/DomradioNewsItem');
 
 var {
-  AppRegistry,
   StyleSheet,
-  Text,
-  View,
-  ScrollView
+  ScrollView,
+  ListView,
+  AlertIOS
 } = React;
 
-var styles = StyleSheet.create({
-  news: {
-    backgroundColor: '#EEEEEE',
-  },
-  newsItem: {
-    backgroundColor: '#FFFFFF',
-    margin: 15,
-    padding: 15,
-    borderWidth: 0.5,
-    borderColor: '#CCCCCC'
-  },
-  title: {
-    color: '#C63826',
-    fontSize: 18,
-    fontWeight: 'bold',
-    paddingBottom: 5
-  },
-  pubDate: {
-    color: '#777777',
-    fontSize: 14,
-    paddingBottom: 5
-  },
-  description: {},
-  more: {
-    color: '#777777',
-    alignSelf: 'flex-end',
-    marginTop: 10,
-    marginBottom: 5
-  },
-  seperator: {
-    backgroundColor: '#CCCCCC',
-    height: 0.5
-  }
+var dataSource = new ListView.DataSource({
+  rowHasChanged: (r1, r2) => r1.id !== r2.id
 });
 
-var DomradioNewsItem = React.createClass({
-  getDefaultProps:function() {
-    return {
-      title: 'Sample Title',
-      pubDate: 'Sample Date',
-      description: 'Sample Text',
-      link: 'http://domradio.de'
-    }
-  },
-  render: function() {
-    return (<View>
-              <View style={styles.newsItem}>
-                <Text style={styles.title}>{this.props.title}</Text>
-                <Text style={styles.pubDate}>{this.props.pubDate}</Text>
-                <Text style={styles.description}>{this.props.description}</Text>
-                <Text style={styles.more}>Artikel lesen</Text>
-              </View>
-              <View style={styles.seperator}/>
-            </View>);
-  }
-});
-
-exports.DomradioNews = React.createClass({
+var DomradioNews = React.createClass({
   getInitialState: function() {
-    var that = this;
-    DomradioNewsRepository.getNews(function(err, news) {
-      if (err) {
-        console.alert('News konnten nicht geladen werden!');
-      } else {
-        console.log('Updating news ...');
-        that.setState({
-          news: news
-        });
-      }
-    });
+    this.loadNewsFeed();
     return {
-      news: []
+      dataSource: dataSource.cloneWithRows([])
     }
   },
   render: function() {
-    var newsItems = this.state.news.map(function(item) {
-      console.log(item);
-      return <DomradioNewsItem 
+    return (<ListView
+      style={styles.list}
+      dataSource={this.state.dataSource}
+      renderRow={this.renderNewsItem}/>);
+  },
+  renderNewsItem: function(item) {
+    return <DomradioNewsItem 
         title={item.title} 
         pubDate={item.pubDate} 
         description={item.description} 
         link={item.link}/>
-    })
-    return (<ScrollView style={ styles.news } >
-              {newsItems}
-    				</ScrollView>);
+  },
+  loadNewsFeed: function() {
+    var that = this;
+    DomradioNewsRepository.getNews()
+      .then(function(news) {
+        that.setState({
+          dataSource: that.state.dataSource.cloneWithRows(news)
+        });
+      })
+      .catch(function(error) {
+        AlertIOS.alert('Fehler', 'Das Laden der Nachrichten ist fehlgeschlagen');
+      });
   }
 });
 
+var styles = StyleSheet.create({
+  list: {
+    backgroundColor:'#EEEEEE'
+  }
+});
 
+module.exports = DomradioNews;
