@@ -26,6 +26,7 @@ var DomradioNews = React.createClass({
   render: function() {
     return (<ListView
       style={styles.list}
+      pageSize='4'
       dataSource={this.state.dataSource}
       renderRow={this.renderNewsItem}/>);
   },
@@ -34,7 +35,7 @@ var DomradioNews = React.createClass({
         title={item.title} 
         pubDate={item.pubDate} 
         description={item.description} 
-        openNewsDetails={() => this.openNewsDetails(item.link)}/>
+        openNewsDetails={() => this.openNewsDetails(item.link, item.title)}/>
   },
   loadNewsFeed: function() {
     var that = this;
@@ -48,9 +49,9 @@ var DomradioNews = React.createClass({
         AlertIOS.alert('Fehler', 'Das Laden der Nachrichten ist fehlgeschlagen.');
       });
   },
-  openNewsDetails: function(link) {
+  openNewsDetails: function(link, title) {
     this.props.toRoute({
-      name: 'Detail',
+      name: 'Artikel lesen',
       component: DomradioNewsDetail,
       data: {
         link: link

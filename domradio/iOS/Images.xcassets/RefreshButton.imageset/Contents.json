@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "PlayButton.png"
+      "filename" : "RefreshButton.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "PlayButton@2x.png"
+      "filename" : "RefreshButton@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "PlayButton@3x.png"
+      "filename" : "RefreshButton@3x.png"
     }
   ],
   "info" : {

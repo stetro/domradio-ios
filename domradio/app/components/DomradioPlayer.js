@@ -2,7 +2,49 @@
 
 var React = require('react-native');
 
-var { StyleSheet, Text, View, Image } = React;
+var { StyleSheet, Text, View, Image, TouchableHighlight } = React;
+
+var DomradioPlayer = React.createClass({
+  getInitialState:function() {
+    return {
+      status: 'STOPPED'
+    };
+  },
+  render: function() {
+    var playerIcon, playerText;
+    if (this.state.status == 'STOPPED') {
+      playerIcon = require('image!PlayButton');
+    } else {
+      playerIcon = require('image!PauseButton');
+    }
+    if (this.state.status == 'LOADING') {
+      playerText = 'Lädt ...';
+    } else {
+      playerText = 'domradio.de Livestream';
+    }
+
+    return (<View style={styles.navigation}>
+              <TouchableHighlight activeOpacity={0.3}
+                  underlayColor={'#444444'}
+                  onPress={this.onPlayerClick}>
+                <Image style={ styles.playButton } 
+                  source={ playerIcon }/>
+              </TouchableHighlight>
+              <Text style={ styles.text }>{ playerText }</Text>
+            </View>);
+  },
+  onPlayerClick: function() {
+    if (this.state.status == 'STOPPED') {
+      this.setState({
+        status: 'LOADING'
+      });
+    } else {
+      this.setState({
+        status: 'STOPPED'
+      });
+    }
+  }
+});
 
 var styles = StyleSheet.create({
   navigation:{
@@ -13,6 +55,7 @@ var styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     padding: 20,
+    paddingLeft: 10,
     flex: 1
   },
   playButton:{
@@ -20,15 +63,6 @@ var styles = StyleSheet.create({
     height: 40,
     margin: 9,
     backgroundColor: 'transparent'
-  }
-});
-
-var DomradioPlayer = React.createClass({
-  render: function() {
-    return (<View style={styles.navigation}>
-              <Image style={ styles.playButton } source={{uri:'play', isStatic:true}}/>
-              <Text style={ styles.text }>domradio.de Livestream</Text>
-            </View>)
   }
 });
 

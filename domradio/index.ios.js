@@ -3,6 +3,8 @@
 var React = require('react-native');
 var DomradioPlayer = require('./app/components/DomradioPlayer');
 var DomradioNews = require('./app/components/DomradioNews');
+var RefreshButton = require('./app/components/RefreshButton');
+var BackButton = require('./app/components/BackButton');
 var Router = require('react-native-router');
 
 var {
@@ -13,7 +15,8 @@ var {
 
 var newsListRoute = {
   name: 'domradio.de',
-  component: DomradioNews
+  component: DomradioNews,
+  rightCorner: RefreshButton
 };
 
 var domradio = React.createClass({
