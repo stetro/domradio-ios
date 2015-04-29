@@ -9,15 +9,8 @@ var {
 } = React;
 
 var BackButton = React.createClass({
-  onPress: function() {
-    if (!this.props.willDisappear) {
-      this.props.navigator.pop();
-    }
-  },
   render: function() {
-    return (<TouchableHighlight underlayColor="transparent" onPress={this.onPress}>
-              <Text style={styles.navbarText}>Zurück</Text>
-            </TouchableHighlight>);
+    return (<Text style={styles.navbarText}>Zurück</Text>);
   }
 });
 
@@ -25,7 +18,8 @@ var styles = StyleSheet.create({
   navbarText: {
     color: 'white',
     fontSize: 16,
-    margin: 10,
+    marginTop: 5,
+    marginLeft: 10,
     fontWeight: '600',
     textAlign: 'center',
     alignItems: 'center'

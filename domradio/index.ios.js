@@ -22,7 +22,10 @@ var newsListRoute = {
 var domradio = React.createClass({
   render: function() {
     return (<View style = { styles.container }>
-              <Router firstRoute={newsListRoute} headerStyle={styles.header}/>
+              <Router 
+                firstRoute={newsListRoute} 
+                headerStyle={styles.header}
+                backButtonComponent={BackButton} />
               <DomradioPlayer style={styles.player}/>
             </View>);
   }
