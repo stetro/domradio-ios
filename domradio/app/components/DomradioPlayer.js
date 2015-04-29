@@ -2,10 +2,15 @@
 
 var React = require('react-native');
 
-var { StyleSheet, Text, View, Image, TouchableHighlight } = React;
+var DomradioAudioStream = require('../bridge/DomradioAudioStream');
+
+var { StyleSheet, Text, View, Image, TouchableHighlight, DeviceEventEmitter } = React;
 
 var DomradioPlayer = React.createClass({
-  getInitialState:function() {
+  getInitialState: function() {
+    this.subscription = DeviceEventEmitter.addListener(
+      'AudioBridgeEvent', (event) => this.setState(event)
+    );
     return {
       status: 'STOPPED'
     };
@@ -38,11 +43,16 @@ var DomradioPlayer = React.createClass({
       this.setState({
         status: 'LOADING'
       });
+      DomradioAudioStream.play();
     } else {
       this.setState({
         status: 'STOPPED'
       });
+      DomradioAudioStream.stop();
     }
+  },
+  componentWillUnmount :function() {
+    this.subscription.remove();
   }
 });
 

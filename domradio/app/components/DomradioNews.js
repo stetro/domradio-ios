@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var DomradioNewsRepository = require('../data/DomradioNewsRepository');
+var DomradioNewsRepository = require('../bridge/DomradioNewsRepository');
 var DomradioNewsItem = require('../components/DomradioNewsItem');
 var DomradioNewsDetail = require('../components/DomradioNewsDetail');
 

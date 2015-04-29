@@ -31,6 +31,19 @@
 		E4A680B71AF15355003B8948 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680B01AF15355003B8948 /* NSString+XMLEntities.m */; };
 		E4A680BC1AF153C1003B8948 /* RSSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680BB1AF153C1003B8948 /* RSSBridge.m */; };
 		E4A680BF1AF153F2003B8948 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680BE1AF153F2003B8948 /* AppDelegate.m */; };
+		E4A680C11AF15466003B8948 /* AudioBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680C01AF15466003B8948 /* AudioBridge.m */; };
+		E4A680C81AF16624003B8948 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A680C71AF16624003B8948 /* CoreMedia.framework */; };
+		E4A680CA1AF16631003B8948 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A680C91AF16631003B8948 /* AudioToolbox.framework */; };
+		E4A680CC1AF1663B003B8948 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A680CB1AF1663A003B8948 /* AVFoundation.framework */; };
+		E4A680E51AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680D31AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.m */; };
+		E4A680E61AF16C00003B8948 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680D51AF16C00003B8948 /* STKAudioPlayer.m */; };
+		E4A680E71AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680D71AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.m */; };
+		E4A680E81AF16C00003B8948 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680D91AF16C00003B8948 /* STKCoreFoundationDataSource.m */; };
+		E4A680E91AF16C00003B8948 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680DB1AF16C00003B8948 /* STKDataSource.m */; };
+		E4A680EA1AF16C00003B8948 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680DD1AF16C00003B8948 /* STKDataSourceWrapper.m */; };
+		E4A680EB1AF16C00003B8948 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680DF1AF16C00003B8948 /* STKHTTPDataSource.m */; };
+		E4A680EC1AF16C00003B8948 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680E11AF16C00003B8948 /* STKLocalFileDataSource.m */; };
+		E4A680ED1AF16C00003B8948 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680E31AF16C00003B8948 /* STKQueueEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +165,30 @@
 		E4A680BB1AF153C1003B8948 /* RSSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSBridge.m; sourceTree = "<group>"; };
 		E4A680BD1AF153F2003B8948 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E4A680BE1AF153F2003B8948 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E4A680C01AF15466003B8948 /* AudioBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioBridge.m; sourceTree = "<group>"; };
+		E4A680C21AF15481003B8948 /* AudioBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioBridge.h; sourceTree = "<group>"; };
+		E4A680C71AF16624003B8948 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E4A680C91AF16631003B8948 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E4A680CB1AF1663A003B8948 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E4A680D21AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+		E4A680D31AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		E4A680D41AF16C00003B8948 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
+		E4A680D51AF16C00003B8948 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
+		E4A680D61AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		E4A680D71AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		E4A680D81AF16C00003B8948 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		E4A680D91AF16C00003B8948 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		E4A680DA1AF16C00003B8948 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSource.h; sourceTree = "<group>"; };
+		E4A680DB1AF16C00003B8948 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSource.m; sourceTree = "<group>"; };
+		E4A680DC1AF16C00003B8948 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSourceWrapper.h; sourceTree = "<group>"; };
+		E4A680DD1AF16C00003B8948 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		E4A680DE1AF16C00003B8948 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSource.h; sourceTree = "<group>"; };
+		E4A680DF1AF16C00003B8948 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKHTTPDataSource.m; sourceTree = "<group>"; };
+		E4A680E01AF16C00003B8948 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKLocalFileDataSource.h; sourceTree = "<group>"; };
+		E4A680E11AF16C00003B8948 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		E4A680E21AF16C00003B8948 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
+		E4A680E31AF16C00003B8948 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
+		E4A680E41AF16C00003B8948 /* StreamingKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +203,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A680CC1AF1663B003B8948 /* AVFoundation.framework in Frameworks */,
+				E4A680CA1AF16631003B8948 /* AudioToolbox.framework in Frameworks */,
+				E4A680C81AF16624003B8948 /* CoreMedia.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00481BE81AC0C86700671115 /* libRCTWebSocketDebugger.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -258,6 +298,7 @@
 		13B07FAE1A68108700A75B9A /* domradio */ = {
 			isa = PBXGroup;
 			children = (
+				E4A680D11AF16C00003B8948 /* StreamingKit */,
 				E4A680B91AF153C1003B8948 /* Classes */,
 				E4A680A11AF15355003B8948 /* MWFeedParser */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -313,6 +354,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				E4A680CB1AF1663A003B8948 /* AVFoundation.framework */,
+				E4A680C91AF16631003B8948 /* AudioToolbox.framework */,
+				E4A680C71AF16624003B8948 /* CoreMedia.framework */,
 				13B07FAE1A68108700A75B9A /* domradio */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* domradioTests */,
@@ -358,10 +402,38 @@
 			children = (
 				E4A680BD1AF153F2003B8948 /* AppDelegate.h */,
 				E4A680BE1AF153F2003B8948 /* AppDelegate.m */,
+				E4A680C21AF15481003B8948 /* AudioBridge.h */,
+				E4A680C01AF15466003B8948 /* AudioBridge.m */,
 				E4A680BA1AF153C1003B8948 /* RSSBridge.h */,
 				E4A680BB1AF153C1003B8948 /* RSSBridge.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E4A680D11AF16C00003B8948 /* StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				E4A680D21AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.h */,
+				E4A680D31AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.m */,
+				E4A680D41AF16C00003B8948 /* STKAudioPlayer.h */,
+				E4A680D51AF16C00003B8948 /* STKAudioPlayer.m */,
+				E4A680D61AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.h */,
+				E4A680D71AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.m */,
+				E4A680D81AF16C00003B8948 /* STKCoreFoundationDataSource.h */,
+				E4A680D91AF16C00003B8948 /* STKCoreFoundationDataSource.m */,
+				E4A680DA1AF16C00003B8948 /* STKDataSource.h */,
+				E4A680DB1AF16C00003B8948 /* STKDataSource.m */,
+				E4A680DC1AF16C00003B8948 /* STKDataSourceWrapper.h */,
+				E4A680DD1AF16C00003B8948 /* STKDataSourceWrapper.m */,
+				E4A680DE1AF16C00003B8948 /* STKHTTPDataSource.h */,
+				E4A680DF1AF16C00003B8948 /* STKHTTPDataSource.m */,
+				E4A680E01AF16C00003B8948 /* STKLocalFileDataSource.h */,
+				E4A680E11AF16C00003B8948 /* STKLocalFileDataSource.m */,
+				E4A680E21AF16C00003B8948 /* STKQueueEntry.h */,
+				E4A680E31AF16C00003B8948 /* STKQueueEntry.m */,
+				E4A680E41AF16C00003B8948 /* StreamingKit-Prefix.pch */,
+			);
+			path = StreamingKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +486,13 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -584,16 +663,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A680EA1AF16C00003B8948 /* STKDataSourceWrapper.m in Sources */,
 				E4A680B31AF15355003B8948 /* MWFeedItem.m in Sources */,
 				E4A680B71AF15355003B8948 /* NSString+XMLEntities.m in Sources */,
+				E4A680EB1AF16C00003B8948 /* STKHTTPDataSource.m in Sources */,
+				E4A680E81AF16C00003B8948 /* STKCoreFoundationDataSource.m in Sources */,
+				E4A680EC1AF16C00003B8948 /* STKLocalFileDataSource.m in Sources */,
 				E4A680B41AF15355003B8948 /* MWFeedParser.m in Sources */,
 				E4A680B11AF15355003B8948 /* GTMNSString+HTML.m in Sources */,
+				E4A680E51AF16C00003B8948 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				E4A680C11AF15466003B8948 /* AudioBridge.m in Sources */,
+				E4A680E91AF16C00003B8948 /* STKDataSource.m in Sources */,
+				E4A680E61AF16C00003B8948 /* STKAudioPlayer.m in Sources */,
 				E4A680BF1AF153F2003B8948 /* AppDelegate.m in Sources */,
 				E4A680B61AF15355003B8948 /* NSString+HTML.m in Sources */,
 				E4A680B51AF15355003B8948 /* NSDate+InternetDateTime.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				E4A680B21AF15355003B8948 /* MWFeedInfo.m in Sources */,
+				E4A680E71AF16C00003B8948 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				E4A680BC1AF153C1003B8948 /* RSSBridge.m in Sources */,
+				E4A680ED1AF16C00003B8948 /* STKQueueEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
