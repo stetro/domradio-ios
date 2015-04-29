@@ -12,9 +12,7 @@
 #import "STKAudioPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface AudioBridge : NSObject <RCTBridgeModule> {
-  STKAudioPlayer* audioPlayer;
-}
+@interface AudioBridge : NSObject <RCTBridgeModule, STKAudioPlayerDelegate> 
 @end
 
 #endif
