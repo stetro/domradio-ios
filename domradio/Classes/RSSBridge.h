@@ -15,7 +15,6 @@
 @interface RSSBridge : NSObject <RCTBridgeModule, MWFeedParserDelegate>{
   MWFeedParser *feedParser;
   NSMutableArray *parsedItems;
-  RCTResponseSenderBlock responseCallback;
 }
   -(NSDictionary*) convertToDictionary: (MWFeedItem*)item;
 @end

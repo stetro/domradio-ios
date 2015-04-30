@@ -9,7 +9,8 @@ var {
   StyleSheet,
   ScrollView,
   ListView,
-  AlertIOS
+  AlertIOS,
+  DeviceEventEmitter
 } = React;
 
 var dataSource = new ListView.DataSource({
@@ -17,8 +18,24 @@ var dataSource = new ListView.DataSource({
 });
 
 var DomradioNews = React.createClass({
-  getInitialState: function() {
+  componentWillMount:function() {
+    this.subscription = DeviceEventEmitter.addListener(
+      'RSSBridgeEvent', (event) => {
+        if (event.news != null) {
+          this.setState({
+            dataSource: this.state.dataSource.cloneWithRows(event.news)
+          });
+        } else {
+          AlertIOS.alert('Fehler', 'Das Laden der Nachrichten ist fehlgeschlagen.');
+        }
+      }
+    );
     this.loadNewsFeed();
+  },
+  componentWillUnmount:function() {
+    this.subscription.remove();
+  },
+  getInitialState: function() {
     return {
       dataSource: dataSource.cloneWithRows([])
     }
@@ -38,16 +55,7 @@ var DomradioNews = React.createClass({
         openNewsDetails={() => this.openNewsDetails(item.link, item.title)}/>
   },
   loadNewsFeed: function() {
-    var that = this;
-    DomradioNewsRepository.getNews()
-      .then(function(news) {
-        that.setState({
-          dataSource: that.state.dataSource.cloneWithRows(news)
-        });
-      })
-      .catch(function(error) {
-        AlertIOS.alert('Fehler', 'Das Laden der Nachrichten ist fehlgeschlagen.');
-      });
+    DomradioNewsRepository.triggerNewsRefresh();
   },
   openNewsDetails: function(link, title) {
     this.props.toRoute({

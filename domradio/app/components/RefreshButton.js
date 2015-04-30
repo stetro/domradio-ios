@@ -9,8 +9,11 @@ var {
 } = React;
 
 var RefreshButton = React.createClass({
+  onPress: function() {
+    this.props.customAction("refreshDomradioNews");
+  },
   render: function() {
-    return (<TouchableHighlight underlayColor="transparent">
+    return (<TouchableHighlight underlayColor="transparent" onPress={this.onPress}>
               <Image style={ styles.backButton } source={ require('image!RefreshButton') }/>
             </TouchableHighlight>);
   }

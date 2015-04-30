@@ -10,8 +10,18 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation AppDelegate
+
+- (void)setSharedAudioSessionCategory
+{
+  NSError* error;
+  [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+  if(error){
+    NSLog(@"Could not initialize AVAudioSession");
+  }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -28,6 +38,8 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  [self setSharedAudioSessionCategory];
   
   return YES;
 }

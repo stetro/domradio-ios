@@ -6,16 +6,19 @@
 //  Copyright (c) 2015 Facebook. All rights reserved.
 //
 
-#import "RSSBridge.h"
 #import "RCTUtils.h"
+#import "RCTBridge.h"
+#import "RCTEventDispatcher.h"
+#import "RSSBridge.h"
 #import "MWFeedParser.h"
 
 @implementation RSSBridge
 
+@synthesize bridge = _bridge;
+
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getNews: (RCTResponseSenderBlock) callback){
-  responseCallback = callback;
+RCT_EXPORT_METHOD(triggerRefresh){
   parsedItems = [[NSMutableArray alloc] init];
   
   NSURL *feedURL = [NSURL URLWithString:@"http://www.domradio.de/rss-feeds/domradio-rss.xml"];
@@ -36,11 +39,11 @@ RCT_EXPORT_METHOD(getNews: (RCTResponseSenderBlock) callback){
   for (MWFeedItem *item in parsedItems) {
     [news addObject:[self convertToDictionary:item]];
   }
-  responseCallback(@[[NSNull null], news]);
+  [self.bridge.eventDispatcher sendDeviceEventWithName:@"RSSBridgeEvent" body:@{@"news":news}];
 }
 
 - (void) feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error{
-  responseCallback(@[@"Error",[NSNull null]]);
+  [self.bridge.eventDispatcher sendDeviceEventWithName:@"RSSBridgeEvent" body:@{@"news":[NSNull null]}];
 }
 
 -(NSDictionary*) convertToDictionary: (MWFeedItem*)item{

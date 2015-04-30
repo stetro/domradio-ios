@@ -52,6 +52,7 @@ RCT_EXPORT_METHOD(getStatus:(RCTResponseSenderBlock) callback){
 }
 -(void) audioPlayer:(STKAudioPlayer *)audioPlayer didFinishPlayingQueueItemId:(NSObject *)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration{
   NSLog(@"AudioPlayer has stopped");
+  [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent" body:@{@"status":@"STOPPED"}];
 }
 -(void)audioPlayer:(STKAudioPlayer *)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject *)queueItemId{
   NSLog(@"AudioPlayer finished buffering");

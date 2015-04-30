@@ -1,11 +1,14 @@
 'use strict';
 
 var React = require('react-native');
+var Router = require('react-native-router');
+
 var DomradioPlayer = require('./app/components/DomradioPlayer');
 var DomradioNews = require('./app/components/DomradioNews');
 var RefreshButton = require('./app/components/RefreshButton');
 var BackButton = require('./app/components/BackButton');
-var Router = require('react-native-router');
+
+var DomradioNewsRepository = require('./app/bridge/DomradioNewsRepository');
 
 var {
   AppRegistry,
@@ -25,7 +28,8 @@ var domradio = React.createClass({
               <Router 
                 firstRoute={newsListRoute} 
                 headerStyle={styles.header}
-                backButtonComponent={BackButton} />
+                backButtonComponent={BackButton}
+                customAction={DomradioNewsRepository.triggerNewsRefresh} />
               <DomradioPlayer style={styles.player}/>
             </View>);
   }

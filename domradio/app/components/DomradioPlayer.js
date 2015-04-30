@@ -12,12 +12,9 @@ var DomradioPlayer = React.createClass({
       'AudioBridgeEvent', (event) => this.setState(event)
     );
     DomradioAudioStream.getStatus((error, status)=>{
-      console.log(status);
       this.setState(status);
     });
-    return {
-      status: 'STOPPED'
-    };
+    return { status: 'STOPPED' };
   },
   render: function() {
     var playerIcon, playerText;
