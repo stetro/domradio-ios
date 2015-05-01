@@ -4,6 +4,7 @@ var React = require('react-native');
 var DomradioNewsRepository = require('../bridge/DomradioNewsRepository');
 var DomradioNewsItem = require('../components/DomradioNewsItem');
 var DomradioNewsDetail = require('../components/DomradioNewsDetail');
+var RefreshableListView = require('react-native-refreshable-listview')
 
 var {
   StyleSheet,
@@ -41,11 +42,16 @@ var DomradioNews = React.createClass({
     }
   },
   render: function() {
-    return (<ListView
-      style={styles.list}
-      pageSize='4'
-      dataSource={this.state.dataSource}
-      renderRow={this.renderNewsItem}/>);
+    return (
+      <RefreshableListView
+        style={styles.list}
+        pageSize='4'
+        minPulldownDistance='40'
+        stylesheet={pullDownStyle}
+        dataSource={this.state.dataSource}
+        renderRow={this.renderNewsItem}
+        loadData={this.loadNewsFeed}
+        refreshDescription="Aktualisieren"/>);
   },
   renderNewsItem: function(item) {
     return <DomradioNewsItem 
@@ -73,5 +79,21 @@ var styles = StyleSheet.create({
     backgroundColor:'#EEEEEE'
   }
 });
+
+var pullDownStyle = StyleSheet.create({
+  wrapper: {
+    height: 60,
+    marginTop: 10,
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE',
+  },
+  loading: {
+    height: 60,
+  },
+})
 
 module.exports = DomradioNews;
