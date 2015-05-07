@@ -2,7 +2,7 @@
 
 var React = require('react-native');
 
-var DomradioAudioStream = require('../bridge/DomradioAudioStream');
+var DomradioAudioStream = require('../bridges/DomradioAudioStream');
 
 var { StyleSheet, Text, View, Image, TouchableHighlight, DeviceEventEmitter } = React;
 

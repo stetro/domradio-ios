@@ -8,13 +8,13 @@ var {
   TouchableHighlight
 } = React;
 
-var RefreshButton = React.createClass({
+var InfoButton = React.createClass({
   onPress: function() {
     this.props.customAction("refreshDomradioNews");
   },
   render: function() {
     return (<TouchableHighlight underlayColor="transparent" onPress={this.onPress}>
-              <Image style={ styles.backButton } source={ require('image!RefreshButton') }/>
+              <Image style={ styles.backButton } source={ require('image!InfoButton') }/>
             </TouchableHighlight>);
   }
 });
@@ -29,4 +29,4 @@ var styles = StyleSheet.create({
   }
 });
 
-module.exports = RefreshButton;
+module.exports = InfoButton;

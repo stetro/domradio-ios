@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var DomradioNewsRepository = require('../bridge/DomradioNewsRepository');
+var DomradioNewsRepository = require('../bridges/DomradioNewsRepository');
 var DomradioNewsItem = require('../components/DomradioNewsItem');
 var DomradioNewsDetail = require('../components/DomradioNewsDetail');
 var RefreshableListView = require('react-native-refreshable-listview')

@@ -11,11 +11,11 @@
 #import "RCTBridgeModule.h"
 #import "MWFeedParser.h"
 
-@interface RSSBridge : NSObject <RCTBridgeModule, MWFeedParserDelegate>{
-  MWFeedParser *feedParser;
-  NSMutableArray *parsedItems;
+@interface RSSBridge : NSObject <RCTBridgeModule, MWFeedParserDelegate> {
+    MWFeedParser *feedParser;
+    NSMutableArray *parsedItems;
 }
-  -(NSDictionary*) convertToDictionary: (MWFeedItem*)item;
+- (NSDictionary *)convertToDictionary:(MWFeedItem *)item;
 @end
 
 #endif

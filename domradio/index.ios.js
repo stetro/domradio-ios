@@ -5,10 +5,10 @@ var Router = require('react-native-router');
 
 var DomradioPlayer = require('./app/components/DomradioPlayer');
 var DomradioNews = require('./app/components/DomradioNews');
-var RefreshButton = require('./app/components/RefreshButton');
+var InfoButton = require('./app/components/InfoButton');
 var BackButton = require('./app/components/BackButton');
-
-var DomradioNewsRepository = require('./app/bridge/DomradioNewsRepository');
+var DomradioInfo = require('./app/utils/DomradioInfo');
+var DomradioNewsRepository = require('./app/bridges/DomradioNewsRepository');
 
 var {
   AppRegistry,
@@ -19,7 +19,7 @@ var {
 var newsListRoute = {
   name: 'domradio.de',
   component: DomradioNews,
-  rightCorner: RefreshButton
+  rightCorner: InfoButton
 };
 
 var domradio = React.createClass({
@@ -29,7 +29,7 @@ var domradio = React.createClass({
                 firstRoute={newsListRoute} 
                 headerStyle={styles.header}
                 backButtonComponent={BackButton}
-                customAction={DomradioNewsRepository.triggerNewsRefresh} />
+                customAction={DomradioInfo.show} />
               <DomradioPlayer style={styles.player}/>
             </View>);
   }
