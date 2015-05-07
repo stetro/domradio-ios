@@ -2,7 +2,7 @@
 
 React Native - iOS [domradio.de](http://domradio.de) App 
 
-![Screenshot](screenshot.png)
+![Screenshot](screencast.gif)
 
 > There is also an [Android](https://github.com/stetro/domradio-android) implementation
 
