@@ -33,6 +33,7 @@ RCT_EXPORT_METHOD(stop) {
         [audioPlayer stop];
         [audioPlayer setDelegate:nil];
     }
+    [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent" body:@{@"status" : @"STOPPED"}];
 }
 
 RCT_EXPORT_METHOD(getStatus:
