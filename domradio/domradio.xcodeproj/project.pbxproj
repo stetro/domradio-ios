@@ -19,6 +19,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		E41D087A1AFCB44D00F6592E /* libRCTAdSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302B41ABCB8E700DB3ED1 /* libRCTAdSupport.a */; };
+		E41D087B1AFCB44D00F6592E /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		E41D087C1AFCB44D00F6592E /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		E4A680B11AF15355003B8948 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680A31AF15355003B8948 /* GTMNSString+HTML.m */; };
 		E4A680B21AF15355003B8948 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680A51AF15355003B8948 /* MWFeedInfo.m */; };
 		E4A680B31AF15355003B8948 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A680A71AF15355003B8948 /* MWFeedItem.m */; };
@@ -118,6 +121,76 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		E41D08871AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = RCTLinking;
+		};
+		E41D08891AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBBA2D1A601D0E00E9B192;
+			remoteInfo = React;
+		};
+		E41D088B1AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B5119A1A9E6C1200147676;
+			remoteInfo = RCTText;
+		};
+		E41D088D1AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = RCTActionSheet;
+		};
+		E41D088F1AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302AF1ABCB8E700DB3ED1 /* RCTAdSupport.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 832C817F1AAF6DEF007FA2F7;
+			remoteInfo = RCTAdSupport;
+		};
+		E41D08911AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = RCTGeolocation;
+		};
+		E41D08931AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B5115C1A9E6B3D00147676;
+			remoteInfo = RCTImage;
+		};
+		E41D08951AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = RCTNetwork;
+		};
+		E41D08971AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 832C817F1AAF6DEF007FA2F7;
+			remoteInfo = RCTVibration;
+		};
+		E41D08991AFCD9B200F6592E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00481BDB1AC0C7FA00671115 /* RCTWebSocketDebugger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 832C817F1AAF6DEF007FA2F7;
+			remoteInfo = RCTWebSocketDebugger;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +270,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41D087A1AFCB44D00F6592E /* libRCTAdSupport.a in Frameworks */,
+				E41D087B1AFCB44D00F6592E /* libRCTGeolocation.a in Frameworks */,
+				E41D087C1AFCB44D00F6592E /* libRCTVibration.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00481BE81AC0C86700671115 /* libRCTWebSocketDebugger.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -456,6 +532,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				E41D08881AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D088A1AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D088C1AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D088E1AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D08901AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D08921AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D08941AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D08961AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D08981AFCD9B200F6592E /* PBXTargetDependency */,
+				E41D089A1AFCD9B200F6592E /* PBXTargetDependency */,
 			);
 			name = domradio;
 			productName = "Hello World";
@@ -682,6 +768,56 @@
 			target = 13B07F861A680F5B00A75B9A /* domradio */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		E41D08881AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTLinking;
+			targetProxy = E41D08871AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D088A1AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = React;
+			targetProxy = E41D08891AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D088C1AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTText;
+			targetProxy = E41D088B1AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D088E1AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTActionSheet;
+			targetProxy = E41D088D1AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D08901AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTAdSupport;
+			targetProxy = E41D088F1AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D08921AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTGeolocation;
+			targetProxy = E41D08911AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D08941AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTImage;
+			targetProxy = E41D08931AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D08961AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTNetwork;
+			targetProxy = E41D08951AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D08981AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTVibration;
+			targetProxy = E41D08971AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
+		E41D089A1AFCD9B200F6592E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RCTWebSocketDebugger;
+			targetProxy = E41D08991AFCD9B200F6592E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -744,6 +880,7 @@
 					"$(SRCROOT)/node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -762,6 +899,7 @@
 					"$(SRCROOT)/node_modules/react-native/React/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -851,6 +989,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -16,7 +16,7 @@ var stop = function() {
 
 exports.play = function() {
   NetInfo.reachabilityIOS.fetch().done(function(reach) {
-    if (reach == 'wifi') {
+    if (reach == 'cell') {
       AlertIOS.alert('Mobiles Internet', 'Sie sind nicht mit einem WLAN verbunden. Wollen Sie über Ihr Mobilfunknetz fortfahren?', [{
         text: 'Radio starten',
         onPress: function() {
