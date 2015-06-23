@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320DE3DF1876F190169D6855 /* libPods-domradio-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E0925BA0248DBFFD2119BA /* libPods-domradio-ios.a */; };
+		E4130E121B39C91900732DAE /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4130E111B39C91900732DAE /* PlayerViewController.swift */; };
+		E449885B1B39D6BD00B8CDBA /* DomradioFeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */; };
+		E449885F1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */; };
 		E44DB4481B388701002645E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB4471B388701002645E6 /* AppDelegate.swift */; };
-		E44DB44A1B388701002645E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB4491B388701002645E6 /* ViewController.swift */; };
 		E44DB44D1B388701002645E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44DB44B1B388701002645E6 /* Main.storyboard */; };
 		E44DB44F1B388701002645E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44DB44E1B388701002645E6 /* Images.xcassets */; };
 		E44DB4521B388701002645E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E44DB4501B388701002645E6 /* LaunchScreen.xib */; };
 		E44DB45E1B388701002645E6 /* domradio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB45D1B388701002645E6 /* domradio_iosTests.swift */; };
+		E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5D1B39C14B00513759 /* NewsViewController.swift */; };
+		E45D7A601B39C1E400513759 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */; };
+		E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6DF101B388DE700F00854 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +32,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06E0925BA0248DBFFD2119BA /* libPods-domradio-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-domradio-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631A36D4B33229FE64D50558 /* Pods-domradio-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-domradio-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-domradio-ios/Pods-domradio-ios.release.xcconfig"; sourceTree = "<group>"; };
+		B5758DB2E2C29A2B2D37C565 /* Pods-domradio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-domradio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-domradio-ios/Pods-domradio-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E4130E111B39C91900732DAE /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = Controller/PlayerViewController.swift; sourceTree = "<group>"; };
+		E44988591B39D42500B8CDBA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Util/Bridging-Header.h"; sourceTree = "<group>"; };
+		E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParser.swift; path = Util/DomradioFeedParser.swift; sourceTree = "<group>"; };
+		E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParserDelegate.swift; path = Util/DomradioFeedParserDelegate.swift; sourceTree = "<group>"; };
 		E44DB4421B388701002645E6 /* domradio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domradio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44DB4461B388701002645E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44DB4471B388701002645E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E44DB4491B388701002645E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E44DB44C1B388701002645E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E44DB44E1B388701002645E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E44DB4511B388701002645E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E44DB4571B388701002645E6 /* domradio-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "domradio-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44DB45C1B388701002645E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44DB45D1B388701002645E6 /* domradio_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domradio_iosTests.swift; sourceTree = "<group>"; };
+		E45D7A5D1B39C14B00513759 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = Controller/NewsViewController.swift; sourceTree = "<group>"; };
+		E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = View/NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E4F6DF101B388DE700F00854 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Controller/NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320DE3DF1876F190169D6855 /* libPods-domradio-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +72,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		854A08AD7B07D508D1267726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5758DB2E2C29A2B2D37C565 /* Pods-domradio-ios.debug.xcconfig */,
+				631A36D4B33229FE64D50558 /* Pods-domradio-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B9A139B9B9D9C731A27BFC41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E0925BA0248DBFFD2119BA /* libPods-domradio-ios.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E44988571B39D3ED00B8CDBA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E44988591B39D42500B8CDBA /* Bridging-Header.h */,
+				E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */,
+				E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		E44DB4391B388701002645E6 = {
 			isa = PBXGroup;
 			children = (
 				E44DB4441B388701002645E6 /* domradio-ios */,
 				E44DB45A1B388701002645E6 /* domradio-iosTests */,
 				E44DB4431B388701002645E6 /* Products */,
+				854A08AD7B07D508D1267726 /* Pods */,
+				B9A139B9B9D9C731A27BFC41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +122,10 @@
 		E44DB4441B388701002645E6 /* domradio-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E44988571B39D3ED00B8CDBA /* Util */,
+				E4F6DF141B3897DD00F00854 /* View */,
+				E4F6DF0C1B38898A00F00854 /* Controller */,
 				E44DB4471B388701002645E6 /* AppDelegate.swift */,
-				E44DB4491B388701002645E6 /* ViewController.swift */,
 				E44DB44B1B388701002645E6 /* Main.storyboard */,
 				E44DB44E1B388701002645E6 /* Images.xcassets */,
 				E44DB4501B388701002645E6 /* LaunchScreen.xib */,
@@ -112,6 +159,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4F6DF0C1B38898A00F00854 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4F6DF101B388DE700F00854 /* NavigationController.swift */,
+				E45D7A5D1B39C14B00513759 /* NewsViewController.swift */,
+				E4130E111B39C91900732DAE /* PlayerViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E4F6DF141B3897DD00F00854 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E44DB4611B388701002645E6 /* Build configuration list for PBXNativeTarget "domradio-ios" */;
 			buildPhases = (
+				E7048953D6C30BA422913D33 /* Check Pods Manifest.lock */,
 				E44DB43E1B388701002645E6 /* Sources */,
 				E44DB43F1B388701002645E6 /* Frameworks */,
 				E44DB4401B388701002645E6 /* Resources */,
+				10F4896A7E8AB767513A22F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +274,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10F4896A7E8AB767513A22F2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-domradio-ios/Pods-domradio-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7048953D6C30BA422913D33 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E44DB43E1B388701002645E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44DB44A1B388701002645E6 /* ViewController.swift in Sources */,
+				E449885B1B39D6BD00B8CDBA /* DomradioFeedParser.swift in Sources */,
+				E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */,
+				E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */,
+				E45D7A601B39C1E400513759 /* NewsTableViewCell.swift in Sources */,
+				E449885F1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift in Sources */,
 				E44DB4481B388701002645E6 /* AppDelegate.swift in Sources */,
+				E4130E121B39C91900732DAE /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,16 +443,19 @@
 		};
 		E44DB4621B388701002645E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5758DB2E2C29A2B2D37C565 /* Pods-domradio-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "domradio-ios/Util/Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		E44DB4631B388701002645E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 631A36D4B33229FE64D50558 /* Pods-domradio-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
@@ -409,6 +517,7 @@
 				E44DB4631B388701002645E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E44DB4641B388701002645E6 /* Build configuration list for PBXNativeTarget "domradio-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +526,7 @@
 				E44DB4661B388701002645E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

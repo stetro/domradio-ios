@@ -1,25 +1,21 @@
 //
-//  ViewController.swift
+//  PlayerViewController.swift
 //  domradio-ios
 //
-//  Created by Steffen Tröster on 22/06/15.
+//  Created by Steffen Tröster on 23/06/15.
 //  Copyright (c) 2015 Steffen Tröster. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
 }
-
