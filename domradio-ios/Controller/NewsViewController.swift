@@ -17,23 +17,29 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "domradio.de"
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl!.attributedTitle = NSAttributedString(string: "Zum Aktualisieren herunterziehen ...")
-        self.refreshControl!.addTarget(self, action: "loadNews:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl!)
+        
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "loadNews:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Zum Aktualisieren herunterziehen ...")
+        self.refreshControl = refreshControl;
+        self.tableView.addSubview(refreshControl)
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200.0
         self.parser = DomradioFeedParser(target:self)
-        self.loadNews();
+        self.parser!.parseNews()
     }
 
-    func loadNews(){
+    func loadNews(sender:UIRefreshControl){
         self.parser!.parseNews()
     }
     
     func succeedNewsParsing(items: [MWFeedItem]) {
+        self.refreshControl!.endRefreshing()
         self.items = items
-        self.tableView.reloadSections(NSIndexSet(indexesInRange: NSMakeRange(0, self.tableView.numberOfSections())), withRowAnimation: .None)
+        self.tableView.reloadSections(
+            NSIndexSet(indexesInRange: NSMakeRange(0, self.tableView.numberOfSections())),
+            withRowAnimation: .None)
     }
     
     func failedNewsParsing() {

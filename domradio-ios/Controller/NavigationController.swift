@@ -20,7 +20,10 @@ class NavigationController: UINavigationController {
         
         UINavigationBar.appearance().barTintColor = domradioRed
         self.navigationBar.barStyle = UIBarStyle.BlackTranslucent
-        self.navigationBar.backgroundColor = domradioRed
         self.navigationBar.tintColor = UIColor.whiteColor()
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
 }

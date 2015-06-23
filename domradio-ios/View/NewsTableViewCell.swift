@@ -13,10 +13,13 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet var title:UILabel?
     @IBOutlet var date:UILabel?
     @IBOutlet var news:UILabel?
+    
+    let dateFormatter = NSDateFormatter()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.accessoryType = UITableViewCellAccessoryType.None
+        self.dateFormatter.dateFormat = "dd.MM.yyyy"
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -25,7 +28,7 @@ class NewsTableViewCell: UITableViewCell {
     
     func fillNews(item:MWFeedItem){
         self.title!.text = item.title
-        //cell.date!.text = items[indexPath.item].date
+        self.date!.text = "vom \(dateFormatter.stringFromDate(item.date))"
         var summary = item.summary
         self.news!.text = summary.stringByReplacingOccurrencesOfString("<[^>]+>", withString :"",  options: .RegularExpressionSearch, range: nil)
         //        cell.updateConstraintsIfNeeded()
