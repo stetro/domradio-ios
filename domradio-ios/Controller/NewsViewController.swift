@@ -50,6 +50,14 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier! == "showNews"){
+            var detailController = segue.destinationViewController as! NewsDetailViewController
+            detailController.item = items[self.tableView.indexPathForSelectedRow()!.item]
+        }
+        
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! NewsTableViewCell
         cell.fillNews(items[indexPath.item])

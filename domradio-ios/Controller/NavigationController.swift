@@ -13,14 +13,16 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
         
         let domradioRed = UIColor(
-            red: (CGFloat(157) / 255.0),
-            green: CGFloat(0.0),
-            blue: (CGFloat(17) / 255.0),
+            red: (CGFloat(197) / 255.0),
+            green: (CGFloat(14) / 255.0),
+            blue: (CGFloat(31) / 255.0),
             alpha: CGFloat(1.0))
         
         UINavigationBar.appearance().barTintColor = domradioRed
-        self.navigationBar.barStyle = UIBarStyle.BlackTranslucent
+        UINavigationBar.appearance().translucent = false
+        self.navigationBar.barStyle = UIBarStyle.Black
         self.navigationBar.tintColor = UIColor.whiteColor()
+
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

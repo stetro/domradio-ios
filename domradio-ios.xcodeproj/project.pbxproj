@@ -11,6 +11,7 @@
 		E4130E121B39C91900732DAE /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4130E111B39C91900732DAE /* PlayerViewController.swift */; };
 		E449885B1B39D6BD00B8CDBA /* DomradioFeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */; };
 		E449885F1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */; };
+		E44988611B3A854900B8CDBA /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44988601B3A854900B8CDBA /* NewsDetailViewController.swift */; };
 		E44DB4481B388701002645E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB4471B388701002645E6 /* AppDelegate.swift */; };
 		E44DB44D1B388701002645E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44DB44B1B388701002645E6 /* Main.storyboard */; };
 		E44DB44F1B388701002645E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44DB44E1B388701002645E6 /* Images.xcassets */; };
@@ -39,6 +40,7 @@
 		E44988591B39D42500B8CDBA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Util/Bridging-Header.h"; sourceTree = "<group>"; };
 		E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParser.swift; path = Util/DomradioFeedParser.swift; sourceTree = "<group>"; };
 		E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParserDelegate.swift; path = Util/DomradioFeedParserDelegate.swift; sourceTree = "<group>"; };
+		E44988601B3A854900B8CDBA /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsDetailViewController.swift; path = Controller/NewsDetailViewController.swift; sourceTree = "<group>"; };
 		E44DB4421B388701002645E6 /* domradio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domradio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44DB4461B388701002645E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44DB4471B388701002645E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				E4F6DF101B388DE700F00854 /* NavigationController.swift */,
 				E45D7A5D1B39C14B00513759 /* NewsViewController.swift */,
 				E4130E111B39C91900732DAE /* PlayerViewController.swift */,
+				E44988601B3A854900B8CDBA /* NewsDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44988611B3A854900B8CDBA /* NewsDetailViewController.swift in Sources */,
 				E449885B1B39D6BD00B8CDBA /* DomradioFeedParser.swift in Sources */,
 				E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */,
 				E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */,
@@ -399,6 +403,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = domradio.de;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -436,6 +441,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = domradio.de;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

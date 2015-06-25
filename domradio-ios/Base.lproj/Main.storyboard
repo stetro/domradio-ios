@@ -9,7 +9,7 @@
         <scene sceneID="oxi-jM-WP7">
             <objects>
                 <tableViewController id="YX3-4e-hbI" customClass="NewsViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="187" sectionHeaderHeight="22" sectionFooterHeight="22" id="zL3-JR-gTc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="187" sectionHeaderHeight="22" sectionFooterHeight="22" id="zL3-JR-gTc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,17 +27,17 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="760" verticalHuggingPriority="760" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" restorationIdentifier="title" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-fq-zkA" userLabel="Title">
                                                     <rect key="frame" x="8" y="8" width="568" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.75364977899999996" green="0.20574490940000001" blue="0.22847887880000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.71764705880000002" green="0.1450980392" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="761" verticalHuggingPriority="761" horizontalCompressionResistancePriority="761" verticalCompressionResistancePriority="761" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-d1-ELY" userLabel="Date">
-                                                    <rect key="frame" x="8" y="33" width="568" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="761" verticalHuggingPriority="761" horizontalCompressionResistancePriority="761" verticalCompressionResistancePriority="761" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-d1-ELY" userLabel="Date">
+                                                    <rect key="frame" x="8" y="33" width="568" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="752" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-S6-luL" userLabel="News">
-                                                    <rect key="frame" x="8" y="51" width="568" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="752" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-S6-luL" userLabel="News">
+                                                    <rect key="frame" x="8" y="52" width="568" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -76,6 +76,7 @@
                                     <outlet property="date" destination="H3u-d1-ELY" id="taJ-Ex-Yg5"/>
                                     <outlet property="news" destination="3ma-S6-luL" id="0lX-1g-M9b"/>
                                     <outlet property="title" destination="3ax-fq-zkA" id="LtS-QI-ojn"/>
+                                    <segue destination="lko-XH-6RV" kind="show" identifier="showNews" id="DLT-Dt-nMl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,11 +85,34 @@
                             <outlet property="delegate" destination="YX3-4e-hbI" id="hHs-fp-u2B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="LaD-Qg-et3"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="LaD-Qg-et3">
+                        <barButtonItem key="rightBarButtonItem" image="InfoButton" id="Pau-68-NOT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6L-Ao-p0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1284" y="798"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="qea-rl-aFZ">
+            <objects>
+                <viewController id="lko-XH-6RV" customClass="NewsDetailViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" restorationIdentifier="webview" id="Cpi-cM-p86">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </webView>
+                    <connections>
+                        <outlet property="webview" destination="Cpi-cM-p86" id="1Ar-XQ-FQk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8a-f7-CEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="77c-dd-Rwf">
@@ -150,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="-234" y="798"/>
         </scene>
-        <!--View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="Xnn-7K-lGK">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eo1-YS-VSf" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eo1-YS-VSf" customClass="PlayerViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bxL-7F-KP4"/>
                         <viewControllerLayoutGuide type="bottom" id="x4Q-Hc-jup"/>
@@ -162,19 +186,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlayButton" translatesAutoresizingMaskIntoConstraints="NO" id="s4c-pE-0gV">
-                                <rect key="frame" x="16" y="10" width="40" height="40"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Livestream starten ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D4-Bu-U3L">
-                                <rect key="frame" x="64" y="20" width="161" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="domradio.de Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D4-Bu-U3L">
+                                <rect key="frame" x="64" y="20" width="186" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXw-6j-eOw" userLabel="PlayButton">
+                                <rect key="frame" x="16" y="10" width="40" height="40"/>
+                                <state key="normal" image="PlayButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XXw-6j-eOw" firstAttribute="leading" secondItem="cxA-qq-cG2" secondAttribute="leadingMargin" id="Hhm-XO-55q"/>
+                            <constraint firstItem="XXw-6j-eOw" firstAttribute="top" secondItem="bxL-7F-KP4" secondAttribute="bottom" constant="10" id="UmK-3T-WhW"/>
+                            <constraint firstItem="x4Q-Hc-jup" firstAttribute="top" secondItem="XXw-6j-eOw" secondAttribute="bottom" constant="10" id="Y6T-kZ-j1C"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="playButton" destination="XXw-6j-eOw" id="zDj-HU-Prs"/>
+                        <outlet property="textLabel" destination="3D4-Bu-U3L" id="kL6-Xt-vQo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pb8-du-hkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,6 +218,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="InfoButton" width="22" height="22"/>
         <image name="PlayButton" width="40" height="40"/>
     </resources>
 </document>
