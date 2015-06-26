@@ -11,14 +11,18 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     var items = [MWFeedItem]()
     var target:DomradioFeedParserDelegate
     
+    var title = "domradio.de"
+    var link = "http://www.domradio.de/rss-feeds/domradio-rss.xml"
+    
     init(target:DomradioFeedParserDelegate){
         self.target = target
     }
     
     func parseNews(){
-        var url = NSURL(string: "http://www.domradio.de/rss-feeds/domradio-rss.xml")
+        var url = NSURL(string: link)
         var feedParser = MWFeedParser(feedURL: url)
         feedParser.delegate = self
+        feedParser.connectionType = ConnectionTypeAsynchronously
         feedParser.parse()
         self.items = [MWFeedItem]()
     }
@@ -37,6 +41,12 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     
     func getItems() -> [MWFeedItem]{
         return self.items
+    }
+    
+    func update(title:String, link:String){
+        self.title = title
+        self.link = link
+        self.parseNews()
     }
     
 }

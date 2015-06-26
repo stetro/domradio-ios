@@ -16,17 +16,16 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "domradio.de"
+        self.parser = DomradioFeedParser(target:self)
+        self.title = parser?.title
         
         var refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "loadNews:", forControlEvents: UIControlEvents.ValueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Zum Aktualisieren herunterziehen ...")
         self.refreshControl = refreshControl;
         self.tableView.addSubview(refreshControl)
-        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 200.0
-        self.parser = DomradioFeedParser(target:self)
         self.parser!.parseNews()
     }
 
@@ -36,14 +35,18 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     
     func succeedNewsParsing(items: [MWFeedItem]) {
         self.refreshControl!.endRefreshing()
+        self.title = parser?.title
         self.items = items
         self.tableView.reloadSections(
             NSIndexSet(indexesInRange: NSMakeRange(0, self.tableView.numberOfSections())),
             withRowAnimation: .None)
+        self.tableView.setContentOffset(CGPointZero, animated: true)
     }
     
     func failedNewsParsing() {
-        println("FAILED!!")
+        var alert = UIAlertController(title: "Fehler", message: "Nachrichten konnten nicht geladen werden!", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,11 +54,17 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier! == "showNews"){
-            var detailController = segue.destinationViewController as! NewsDetailViewController
-            detailController.item = items[self.tableView.indexPathForSelectedRow()!.item]
+        if let identifier = segue.identifier{
+            if(segue.identifier! == "showNews"){
+                var detailController = segue.destinationViewController as! NewsDetailViewController
+                detailController.item = items[self.tableView.indexPathForSelectedRow()!.item]
+            }
+            if(segue.identifier! == "selectCategory"){
+                var detailController = segue.destinationViewController as! NavigationController
+                var categoryViewController = detailController.viewControllers.first as! CategoryViewController
+                categoryViewController.updatingCategoryCallback = self.parser!.update
+            }
         }
-        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

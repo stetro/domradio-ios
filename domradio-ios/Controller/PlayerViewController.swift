@@ -24,9 +24,6 @@ class PlayerViewController: UIViewController {
         let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapDetected"))
         singleTap.numberOfTapsRequired = 1
         playButton!.addGestureRecognizer(singleTap)
-        
-
-
     }
 
     override func didReceiveMemoryWarning() {

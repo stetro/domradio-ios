@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--domradio.de-->
         <scene sceneID="oxi-jM-WP7">
             <objects>
                 <tableViewController id="YX3-4e-hbI" customClass="NewsViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,7 +39,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="752" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-S6-luL" userLabel="News">
                                                     <rect key="frame" x="8" y="52" width="568" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -86,16 +86,68 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="LaD-Qg-et3">
+                    <navigationItem key="navigationItem" title="domradio.de" id="LaD-Qg-et3">
                         <barButtonItem key="rightBarButtonItem" image="InfoButton" id="Pau-68-NOT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="qdY-40-ttX" kind="presentation" identifier="selectCategory" id="jyX-RM-d5A"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6L-Ao-p0L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1284" y="798"/>
+        </scene>
+        <!--Artikel zum Thema-->
+        <scene sceneID="o7k-BJ-zoK">
+            <objects>
+                <tableViewController id="Ilw-hH-tVh" customClass="CategoryViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HBo-cp-YuT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="QY3-1I-5sY">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QY3-1I-5sY" id="IS6-DJ-tLN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ilw-hH-tVh" id="dVZ-G7-PxJ"/>
+                            <outlet property="delegate" destination="Ilw-hH-tVh" id="DwJ-rl-Dk7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Artikel zum Thema" id="p83-ls-8X7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="r7U-y1-xxs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="closeModal" destination="Ilw-hH-tVh" id="Yon-4N-8Id"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVk-jZ-MSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988" y="56"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZTB-eP-SMu">
+            <objects>
+                <navigationController id="qdY-40-ttX" customClass="NavigationController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="upa-u4-5rg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ilw-hH-tVh" kind="relationship" relationship="rootViewController" id="qu1-aI-awe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lN-0P-Des" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2104" y="56"/>
         </scene>
         <!--News Detail View Controller-->
         <scene sceneID="qea-rl-aFZ">
@@ -112,12 +164,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8a-f7-CEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="798"/>
+            <point key="canvasLocation" x="2104" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="77c-dd-Rwf">
             <objects>
                 <navigationController id="twS-lu-uYA" customClass="NavigationController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ebx-v6-nVm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -130,10 +183,10 @@
             </objects>
             <point key="canvasLocation" x="518" y="798"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Ggl-Wb-cPS">
             <objects>
-                <viewController id="fPn-dr-V8U" sceneMemberID="viewController">
+                <viewController id="fPn-dr-V8U" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnK-an-HGL"/>
                         <viewControllerLayoutGuide type="bottom" id="fId-7o-mxw"/>
