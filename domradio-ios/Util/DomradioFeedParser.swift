@@ -32,7 +32,7 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     }
 
     func feedParser(parser: MWFeedParser!, didFailWithError error: NSError!) {
-        self.target.failedNewsParsing()
+        self.target.failedNewsParsing(error)
     }
     
     func feedParserDidFinish(parser: MWFeedParser!) {

@@ -43,10 +43,8 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
         self.tableView.setContentOffset(CGPointZero, animated: true)
     }
     
-    func failedNewsParsing() {
-        var alert = UIAlertController(title: "Fehler", message: "Nachrichten konnten nicht geladen werden!", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+    func failedNewsParsing(error:NSError) {
+        RKDropdownAlert.title("Fehler", message: "Nachrichten konnten nicht geladen werden!" );
     }
 
     override func didReceiveMemoryWarning() {

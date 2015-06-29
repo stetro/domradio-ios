@@ -9,6 +9,10 @@
 #ifndef domradio_ios_MWFeedParser_Bridge_h
 #define domradio_ios_MWFeedParser_Bridge_h
 
-#import <MWFeedParser.h>
+#import "MWFeedParser.h"
+#import "RKDropdownAlert.h"
+#import "NJKWebViewProgressView.h"
+#import "NJKWebViewProgress.h"
+#import "STKAudioPlayer.h"
 
 #endif

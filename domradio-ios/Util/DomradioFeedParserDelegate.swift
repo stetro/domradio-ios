@@ -8,5 +8,5 @@
 
 protocol DomradioFeedParserDelegate {
     func succeedNewsParsing(items:[MWFeedItem])
-    func failedNewsParsing()
+    func failedNewsParsing(error:NSError)
 }

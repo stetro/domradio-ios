@@ -87,11 +87,14 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="domradio.de" id="LaD-Qg-et3">
-                        <barButtonItem key="rightBarButtonItem" image="InfoButton" id="Pau-68-NOT">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="Pau-68-NOT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="qdY-40-ttX" kind="presentation" identifier="selectCategory" id="jyX-RM-d5A"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="InfoButton" style="plain" id="1hi-Ba-ZDE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -153,13 +156,37 @@
         <scene sceneID="qea-rl-aFZ">
             <objects>
                 <viewController id="lko-XH-6RV" customClass="NewsDetailViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" restorationIdentifier="webview" id="Cpi-cM-p86">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ovH-QQ-NpZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Xt-2x-Mzi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iuF-SX-qq5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMx-28-Wai">
+                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tcz-RT-TM8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                                <color key="progressTintColor" red="0.61568627450000002" green="0.0" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </webView>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PMx-28-Wai" secondAttribute="trailing" constant="-16" id="A3P-Ay-zE6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tcz-RT-TM8" secondAttribute="trailing" constant="-16" id="CZK-su-73i"/>
+                            <constraint firstItem="PMx-28-Wai" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leadingMargin" constant="-16" id="Ey0-72-6nZ"/>
+                            <constraint firstItem="Tcz-RT-TM8" firstAttribute="top" secondItem="ovH-QQ-NpZ" secondAttribute="bottom" id="LLR-8M-1QR"/>
+                            <constraint firstItem="Tcz-RT-TM8" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leadingMargin" constant="-16" id="cM3-Al-stE"/>
+                            <constraint firstItem="3Xt-2x-Mzi" firstAttribute="top" secondItem="PMx-28-Wai" secondAttribute="bottom" id="iOr-NF-7fW"/>
+                            <constraint firstItem="PMx-28-Wai" firstAttribute="top" secondItem="ovH-QQ-NpZ" secondAttribute="bottom" id="z5T-XR-222"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <outlet property="webview" destination="Cpi-cM-p86" id="1Ar-XQ-FQk"/>
+                        <outlet property="progressView" destination="Tcz-RT-TM8" id="sn5-kh-fs1"/>
+                        <outlet property="webview" destination="PMx-28-Wai" id="f8g-K5-sXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V8a-f7-CEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,7 +213,7 @@
         <!--Main View Controller-->
         <scene sceneID="Ggl-Wb-cPS">
             <objects>
-                <viewController id="fPn-dr-V8U" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="fPn-dr-V8U" customClass="MainViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnK-an-HGL"/>
                         <viewControllerLayoutGuide type="bottom" id="fId-7o-mxw"/>
@@ -207,7 +234,7 @@
                                     <constraint firstAttribute="height" constant="60" id="YTO-hO-lJv"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="eo1-YS-VSf" kind="embed" id="TCY-rz-SEy"/>
+                                    <segue destination="QYZ-kG-uXP" kind="embed" id="1vi-5k-3ZU"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -228,46 +255,48 @@
             <point key="canvasLocation" x="-234" y="798"/>
         </scene>
         <!--Player View Controller-->
-        <scene sceneID="Xnn-7K-lGK">
+        <scene sceneID="W4p-Ia-f7Z">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eo1-YS-VSf" customClass="PlayerViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QYZ-kG-uXP" customClass="PlayerViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bxL-7F-KP4"/>
-                        <viewControllerLayoutGuide type="bottom" id="x4Q-Hc-jup"/>
+                        <viewControllerLayoutGuide type="top" id="ZCW-kk-OBO"/>
+                        <viewControllerLayoutGuide type="bottom" id="thl-N7-G52"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cxA-qq-cG2">
+                    <view key="view" contentMode="scaleToFill" id="nCu-bE-HAi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="domradio.de Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D4-Bu-U3L">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-df-mdy">
+                                <rect key="frame" x="16" y="10" width="40" height="40"/>
+                                <state key="normal" image="PlayButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed" destination="QYZ-kG-uXP" eventType="touchDown" id="edf-xD-JHA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="domradio.de Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHk-Du-iTw">
                                 <rect key="frame" x="64" y="20" width="186" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXw-6j-eOw" userLabel="PlayButton">
-                                <rect key="frame" x="16" y="10" width="40" height="40"/>
-                                <state key="normal" image="PlayButton">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XXw-6j-eOw" firstAttribute="leading" secondItem="cxA-qq-cG2" secondAttribute="leadingMargin" id="Hhm-XO-55q"/>
-                            <constraint firstItem="XXw-6j-eOw" firstAttribute="top" secondItem="bxL-7F-KP4" secondAttribute="bottom" constant="10" id="UmK-3T-WhW"/>
-                            <constraint firstItem="x4Q-Hc-jup" firstAttribute="top" secondItem="XXw-6j-eOw" secondAttribute="bottom" constant="10" id="Y6T-kZ-j1C"/>
+                            <constraint firstItem="thl-N7-G52" firstAttribute="top" secondItem="EPJ-df-mdy" secondAttribute="bottom" constant="10" id="Dbg-T7-y2B"/>
+                            <constraint firstItem="EPJ-df-mdy" firstAttribute="leading" secondItem="nCu-bE-HAi" secondAttribute="leadingMargin" id="MPF-Ao-fh6"/>
+                            <constraint firstItem="EPJ-df-mdy" firstAttribute="top" secondItem="ZCW-kk-OBO" secondAttribute="bottom" constant="10" id="aBs-pr-weZ"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
                     <connections>
-                        <outlet property="playButton" destination="XXw-6j-eOw" id="zDj-HU-Prs"/>
-                        <outlet property="textLabel" destination="3D4-Bu-U3L" id="kL6-Xt-vQo"/>
+                        <outlet property="playerButton" destination="EPJ-df-mdy" id="DZw-p4-fxD"/>
+                        <outlet property="playerLabel" destination="WHk-Du-iTw" id="39v-TH-hi7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pb8-du-hkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XzK-6q-zqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="1375"/>
+            <point key="canvasLocation" x="-234" y="1264"/>
         </scene>
     </scenes>
     <resources>
