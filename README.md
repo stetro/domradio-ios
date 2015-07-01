@@ -1,6 +1,6 @@
 # domradio-ios
-
-React Native - iOS [domradio.de](http://domradio.de) App 
+=======
+iOS [domradio.de](http://domradio.de) App 
 
 ![Screenshot](screencast.gif)
 
@@ -10,6 +10,9 @@ Used Libraries
 --------------
 
 * StreamKit - https://github.com/tumtumtum/StreamingKit
+* RKDropdownAlert - https://github.com/cwRichardKim/RKDropdownAlert
+* NJKWebViewProgress - https://github.com/ninjinkun/NJKWebViewProgress
+* KLCPopup - https://github.com/jmascia/KLCPopup
 * MWFeedParser - https://github.com/mwaterfall/MWFeedParser
 
 License
