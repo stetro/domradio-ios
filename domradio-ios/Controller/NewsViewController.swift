@@ -74,4 +74,10 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
+    @IBAction func showInfo(){
+        var cv = UIViewController(nibName: "InfoView", bundle: nil)
+        var popup = KLCPopup(contentView: cv.view, showType: KLCPopupShowType.BounceIn, dismissType: KLCPopupDismissType.BounceOutToBottom, maskType: KLCPopupMaskType.Dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: true)
+        popup.show()
+    }
 }

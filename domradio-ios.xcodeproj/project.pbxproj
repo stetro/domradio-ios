@@ -21,6 +21,7 @@
 		E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5D1B39C14B00513759 /* NewsViewController.swift */; };
 		E45D7A601B39C1E400513759 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */; };
 		E4CAEF331B3D5C4400DF75C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CAEF321B3D5C4400DF75C9 /* MainViewController.swift */; };
+		E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DFC17B1B445737004C1F7E /* InfoView.xib */; };
 		E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6DF101B388DE700F00854 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,7 @@
 		E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParserDelegate.swift; path = Util/DomradioFeedParserDelegate.swift; sourceTree = "<group>"; };
 		E44988601B3A854900B8CDBA /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsDetailViewController.swift; path = Controller/NewsDetailViewController.swift; sourceTree = "<group>"; };
 		E44988621B3C34D000B8CDBA /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Controller/CategoryViewController.swift; sourceTree = "<group>"; };
-		E44DB4421B388701002645E6 /* domradio-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "domradio-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44DB4421B388701002645E6 /* domradio.de.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = domradio.de.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E44DB4461B388701002645E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E44DB4471B388701002645E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E44DB44C1B388701002645E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		E45D7A5D1B39C14B00513759 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = Controller/NewsViewController.swift; sourceTree = "<group>"; };
 		E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = View/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		E4CAEF321B3D5C4400DF75C9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controller/MainViewController.swift; sourceTree = "<group>"; };
+		E4DFC17B1B445737004C1F7E /* InfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoView.xib; path = View/InfoView.xib; sourceTree = "<group>"; };
 		E4F6DF101B388DE700F00854 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Controller/NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +121,7 @@
 		E44DB4431B388701002645E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E44DB4421B388701002645E6 /* domradio-ios.app */,
+				E44DB4421B388701002645E6 /* domradio.de.app */,
 				E44DB4571B388701002645E6 /* domradio-iosTests.xctest */,
 			);
 			name = Products;
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */,
+				E4DFC17B1B445737004C1F7E /* InfoView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -205,7 +208,7 @@
 			);
 			name = "domradio-ios";
 			productName = "domradio-ios";
-			productReference = E44DB4421B388701002645E6 /* domradio-ios.app */;
+			productReference = E44DB4421B388701002645E6 /* domradio.de.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E44DB4561B388701002645E6 /* domradio-iosTests */ = {
@@ -273,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */,
 				E44DB44D1B388701002645E6 /* Main.storyboard in Resources */,
 				E44DB4521B388701002645E6 /* LaunchScreen.xib in Resources */,
 				E44DB44F1B388701002645E6 /* Images.xcassets in Resources */,
@@ -468,7 +472,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = domradio.de;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "domradio-ios/Util/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -482,7 +486,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = domradio.de;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -502,7 +506,7 @@
 				INFOPLIST_FILE = "domradio-iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/domradio-ios.app/domradio-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/domradio.de.app/domradio.de";
 			};
 			name = Debug;
 		};
@@ -517,7 +521,7 @@
 				INFOPLIST_FILE = "domradio-iosTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/domradio-ios.app/domradio-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/domradio.de.app/domradio.de";
 			};
 			name = Release;
 		};

@@ -14,5 +14,6 @@
 #import "NJKWebViewProgressView.h"
 #import "NJKWebViewProgress.h"
 #import "STKAudioPlayer.h"
+#import "KLCPopup.h"
 
 #endif

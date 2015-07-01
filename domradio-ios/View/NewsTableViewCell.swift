@@ -31,7 +31,6 @@ class NewsTableViewCell: UITableViewCell {
         self.date!.text = "vom \(dateFormatter.stringFromDate(item.date))"
         var summary = item.summary
         self.news!.text = summary.stringByReplacingOccurrencesOfString("<[^>]+>", withString :"",  options: .RegularExpressionSearch, range: nil)
-        //        cell.updateConstraintsIfNeeded()
     }
 
 }

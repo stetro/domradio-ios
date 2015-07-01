@@ -14,18 +14,14 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     @IBOutlet var playerLabel:UILabel?
     @IBOutlet var playerButton:UIButton?
     
-    var player:STKAudioPlayer?
-    
-    let url = "http://domradio-mp3-m.akacast.akamaistream.net/7/148/237368/v1/gnl.akacast.akamaistream.net/domradio-mp3-m"
-    
     @IBAction func buttonPressed(){
         if player == nil {
             self.player = STKAudioPlayer()
             self.player?.delegate = self
         }
         if let audioPlayer = player{
-            if(audioPlayer.state.value == STKAudioPlayerStateReady.value)
-                || (audioPlayer.state.value == STKAudioPlayerStateStopped.value){
+            if  (audioPlayer.state.value == STKAudioPlayerStateReady.value) ||
+                (audioPlayer.state.value == STKAudioPlayerStateStopped.value){
                 audioPlayer.play(url)
             }else{
                 audioPlayer.stop()
@@ -34,16 +30,17 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
         updateView()
     }
     
+    var player:STKAudioPlayer?
+    let url = "http://domradio-mp3-m.akacast.akamaistream.net/7/148/237368/v1/gnl.akacast.akamaistream.net/domradio-mp3-m"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView();
     }
     
     func updateView(){
-        
         if let label = self.playerLabel, let button = self.playerButton{
             if let audioPlayer = player{
-                println(audioPlayer.state.value)
                 if(audioPlayer.state.value == STKAudioPlayerStateBuffering.value){
                     label.text = "Lädt ..."
                     button.imageView?.image = UIImage(named: "PauseButton")

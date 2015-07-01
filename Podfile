@@ -6,6 +6,7 @@ target 'domradio-ios' do
     pod 'RKDropdownAlert'
     pod 'NJKWebViewProgress'
     pod 'StreamingKit'
+    pod 'KLCPopup'
 end
 
 target 'domradio-iosTests' do

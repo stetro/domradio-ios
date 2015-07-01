@@ -8,7 +8,7 @@
         <!--domradio.de-->
         <scene sceneID="oxi-jM-WP7">
             <objects>
-                <tableViewController id="YX3-4e-hbI" customClass="NewsViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="YX3-4e-hbI" customClass="NewsViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="187" sectionHeaderHeight="22" sectionFooterHeight="22" id="zL3-JR-gTc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -16,7 +16,7 @@
                         <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="187" id="DDD-ZF-UIe" customClass="NewsTableViewCell" customModule="domradio_ios" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="187" id="DDD-ZF-UIe" customClass="NewsTableViewCell" customModule="domradio_de" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DDD-ZF-UIe" id="DZO-bm-6wf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -87,14 +87,17 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="domradio.de" id="LaD-Qg-et3">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="Pau-68-NOT">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="Pau-68-NOT" userLabel="Category">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="qdY-40-ttX" kind="presentation" identifier="selectCategory" id="jyX-RM-d5A"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="InfoButton" style="plain" id="1hi-Ba-ZDE">
+                        <barButtonItem key="rightBarButtonItem" image="InfoButton" style="plain" id="1hi-Ba-ZDE" userLabel="Info">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="showInfo" destination="YX3-4e-hbI" id="qp9-ZG-Hmc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -105,7 +108,7 @@
         <!--Artikel zum Thema-->
         <scene sceneID="o7k-BJ-zoK">
             <objects>
-                <tableViewController id="Ilw-hH-tVh" customClass="CategoryViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ilw-hH-tVh" customClass="CategoryViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HBo-cp-YuT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +127,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Artikel zum Thema" id="p83-ls-8X7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="r7U-y1-xxs">
+                        <barButtonItem key="rightBarButtonItem" title="Auswählen" style="plain" id="r7U-y1-xxs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="closeModal" destination="Ilw-hH-tVh" id="Yon-4N-8Id"/>
@@ -139,7 +142,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZTB-eP-SMu">
             <objects>
-                <navigationController id="qdY-40-ttX" customClass="NavigationController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="qdY-40-ttX" customClass="NavigationController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="upa-u4-5rg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -155,7 +158,7 @@
         <!--News Detail View Controller-->
         <scene sceneID="qea-rl-aFZ">
             <objects>
-                <viewController id="lko-XH-6RV" customClass="NewsDetailViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lko-XH-6RV" customClass="NewsDetailViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ovH-QQ-NpZ"/>
                         <viewControllerLayoutGuide type="bottom" id="3Xt-2x-Mzi"/>
@@ -196,7 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="77c-dd-Rwf">
             <objects>
-                <navigationController id="twS-lu-uYA" customClass="NavigationController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="twS-lu-uYA" customClass="NavigationController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ebx-v6-nVm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -213,7 +216,7 @@
         <!--Main View Controller-->
         <scene sceneID="Ggl-Wb-cPS">
             <objects>
-                <viewController id="fPn-dr-V8U" customClass="MainViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fPn-dr-V8U" customClass="MainViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jnK-an-HGL"/>
                         <viewControllerLayoutGuide type="bottom" id="fId-7o-mxw"/>
@@ -257,7 +260,7 @@
         <!--Player View Controller-->
         <scene sceneID="W4p-Ia-f7Z">
             <objects>
-                <viewController id="QYZ-kG-uXP" customClass="PlayerViewController" customModule="domradio_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QYZ-kG-uXP" customClass="PlayerViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZCW-kk-OBO"/>
                         <viewControllerLayoutGuide type="bottom" id="thl-N7-G52"/>
