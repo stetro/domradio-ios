@@ -1,5 +1,4 @@
 # domradio-ios
-=======
 iOS [domradio.de](http://domradio.de) App 
 
 ![Screenshot](screencast.gif)
