@@ -115,7 +115,12 @@ class CategoryViewController: UITableViewController {
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
-    @IBAction func closeModal(){
+    @IBAction func exitModal(){
+        var navigationController = self.parentViewController as! UINavigationController;
+        navigationController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func doneModal(){
         var navigationController = self.parentViewController as! UINavigationController;
         if let updatingCallback = self.updatingCategoryCallback{
             var topic = topics[selectedIndexPath!.item]

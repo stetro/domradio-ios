@@ -127,10 +127,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Artikel zum Thema" id="p83-ls-8X7">
-                        <barButtonItem key="rightBarButtonItem" title="Auswählen" style="plain" id="r7U-y1-xxs">
+                        <barButtonItem key="leftBarButtonItem" title="Abbrechen" id="TEO-Ea-xZa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="closeModal" destination="Ilw-hH-tVh" id="Yon-4N-8Id"/>
+                                <action selector="exitModal" destination="Ilw-hH-tVh" id="7S4-XG-CLw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" style="plain" id="r7U-y1-xxs">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="doneModal" destination="Ilw-hH-tVh" id="EOr-vN-Ty9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
