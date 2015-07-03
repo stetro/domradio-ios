@@ -87,13 +87,13 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="domradio.de" id="LaD-Qg-et3">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="Pau-68-NOT" userLabel="Category">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="organize" id="Pau-68-NOT" userLabel="Category">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="qdY-40-ttX" kind="presentation" identifier="selectCategory" id="jyX-RM-d5A"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="InfoButton" style="plain" id="1hi-Ba-ZDE" userLabel="Info">
+                        <barButtonItem key="rightBarButtonItem" image="InfoButton" style="done" id="1hi-Ba-ZDE" userLabel="Info">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showInfo" destination="YX3-4e-hbI" id="qp9-ZG-Hmc"/>
@@ -133,7 +133,7 @@
                                 <action selector="exitModal" destination="Ilw-hH-tVh" id="7S4-XG-CLw"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Fertig" style="plain" id="r7U-y1-xxs">
+                        <barButtonItem key="rightBarButtonItem" title="Fertig" style="done" id="r7U-y1-xxs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="doneModal" destination="Ilw-hH-tVh" id="EOr-vN-Ty9"/>
