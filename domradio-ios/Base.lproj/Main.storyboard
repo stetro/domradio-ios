@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPn-dr-V8U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPn-dr-V8U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="2104" y="56"/>
         </scene>
-        <!--News Detail View Controller-->
+        <!--News Detail Controller-->
         <scene sceneID="qea-rl-aFZ">
             <objects>
                 <viewController id="lko-XH-6RV" customClass="NewsDetailViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,6 +193,14 @@
                             <constraint firstItem="PMx-28-Wai" firstAttribute="top" secondItem="ovH-QQ-NpZ" secondAttribute="bottom" id="z5T-XR-222"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="News Detail Controller" id="54c-Fo-lib">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="wim-gk-cej">
+                            <connections>
+                                <action selector="share" destination="lko-XH-6RV" id="cvj-Mr-DAS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="progressView" destination="Tcz-RT-TM8" id="sn5-kh-fs1"/>
                         <outlet property="webview" destination="PMx-28-Wai" id="f8g-K5-sXw"/>

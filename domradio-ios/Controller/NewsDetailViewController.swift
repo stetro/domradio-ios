@@ -15,9 +15,10 @@ class NewsDetailViewController: UIViewController, UIWebViewDelegate, NJKWebViewP
     
     var item:MWFeedItem?
     var progressProxy:NJKWebViewProgress?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         if let item = self.item{
             self.title = item.title
             let url = NSURL (string: item.link!)
@@ -32,6 +33,20 @@ class NewsDetailViewController: UIViewController, UIWebViewDelegate, NJKWebViewP
         }else{
             RKDropdownAlert.title("Netzwerkfehler", message: "Artikel konnte nicht geladen werden!" );
         }
+    }
+    
+    @IBAction func share(){
+        var sharingItems = [AnyObject]()
+        
+        if let text = item?.title {
+            sharingItems.append(text)
+        }
+        if let url = item?.link {
+            sharingItems.append(url)
+        }
+        
+        let activityViewController = UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
