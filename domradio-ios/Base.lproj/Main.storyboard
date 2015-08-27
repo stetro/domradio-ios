@@ -125,7 +125,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -134,16 +134,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Artikel zum Thema" id="p83-ls-8X7">
-                        <barButtonItem key="leftBarButtonItem" title="Abbrechen" id="TEO-Ea-xZa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TEO-Ea-xZa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="exitModal" destination="Ilw-hH-tVh" id="7S4-XG-CLw"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Fertig" style="done" id="r7U-y1-xxs">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="doneModal" destination="Ilw-hH-tVh" id="EOr-vN-Ty9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

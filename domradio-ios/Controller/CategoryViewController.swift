@@ -75,26 +75,14 @@ class CategoryViewController: UITableViewController {
         "Weltkirche": "http://www.domradio.de/rss-feeds/themen/65/domradio-rss.xml",
         "Zweites Vatikanisches Konzil": "http://www.domradio.de/rss-feeds/themen/483/domradio-rss.xml"]
     
-    var selectedIndexPath:NSIndexPath?
-    
     var updatingCategoryCallback: ((String , String) -> ())?
+    
+    var selectedTopic:String?
+    var selectedLink:String?
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath)
         cell.textLabel!.text = topics[indexPath.item]
-        if let selectedIndexPath = self.selectedIndexPath{
-            if(indexPath.isEqual(selectedIndexPath)){
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-            }else{
-                cell.accessoryType = UITableViewCellAccessoryType.None
-            }
-        }else{
-            if(indexPath.item == 0){
-                cell.accessoryType = UITableViewCellAccessoryType.Checkmark
-                self.selectedIndexPath = indexPath
-            }
-        }
-        
         return cell
     }
     
@@ -103,16 +91,11 @@ class CategoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let selectedIndexPath = self.selectedIndexPath{
-            let uncheckCell = self.tableView!.cellForRowAtIndexPath(selectedIndexPath)
-            if let resolvedUncheckCell = uncheckCell{
-                resolvedUncheckCell.accessoryType = UITableViewCellAccessoryType.None;
-            }
-        }
-        let checkCell = self.tableView!.cellForRowAtIndexPath(indexPath)
-        checkCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
-        self.selectedIndexPath = indexPath
+        self.tableView!.cellForRowAtIndexPath(indexPath)
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        self.selectedTopic = topics[indexPath.item]
+        self.selectedLink = links[topics[indexPath.item]]
+        navigationController?.dismissViewControllerAnimated(true, completion: updateSelectedData)
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -124,21 +107,12 @@ class CategoryViewController: UITableViewController {
         navigationController.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func doneModal(){
-        let navigationController = self.parentViewController as! UINavigationController;
-        if let updatingCallback = self.updatingCategoryCallback{
-            let topic = topics[selectedIndexPath!.item]
-            let link = links[topics[selectedIndexPath!.item]]
-            updatingCallback(topic, link!);
+    func updateSelectedData(){
+        if  let topic = self.selectedTopic,
+            let link = self.selectedLink,
+            let callback = self.updatingCategoryCallback{
+            callback(topic, link)
         }
-        navigationController.dismissViewControllerAnimated(true, completion: updateSelectedData)
     }
     
-    func updateSelectedData(){
-        if let updatingCallback = self.updatingCategoryCallback{
-            let topic = topics[selectedIndexPath!.item]
-            let link = links[topics[selectedIndexPath!.item]]
-            updatingCallback(topic, link!);
-        }
-    }
 }

@@ -33,6 +33,10 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     func loadNews(sender:UIRefreshControl){
         self.parser!.parseNews()
     }
+
+    func startParsinggNews() {
+        self.refreshControl?.beginRefreshing()
+    }
     
     func succeedNewsParsing(items: [MWFeedItem]) {
         self.refreshControl!.endRefreshing()

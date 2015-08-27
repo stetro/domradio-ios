@@ -24,6 +24,7 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
         feedParser.delegate = self
         feedParser.connectionType = ConnectionTypeAsynchronously
         feedParser.parse()
+        target.startParsinggNews()
         self.items = [MWFeedItem]()
     }
     
