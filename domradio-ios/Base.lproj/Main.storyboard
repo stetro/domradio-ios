@@ -24,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="592" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-9I-ZDN">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="viewContainer" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-9I-ZDN">
                                             <rect key="frame" x="8" y="16" width="576" height="154"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="760" verticalHuggingPriority="760" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" restorationIdentifier="title" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-fq-zkA" userLabel="Title">
@@ -75,6 +75,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Ixg-9I-ZDN" secondAttribute="bottom" constant="8" id="n0g-bw-COq"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="date" destination="H3u-d1-ELY" id="taJ-Ex-Yg5"/>
                                     <outlet property="news" destination="3ma-S6-luL" id="0lX-1g-M9b"/>
@@ -117,13 +118,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" id="QY3-1I-5sY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="categoryCell" id="QY3-1I-5sY">
                                 <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QY3-1I-5sY" id="IS6-DJ-tLN">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

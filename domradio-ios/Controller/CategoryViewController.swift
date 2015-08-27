@@ -115,6 +115,10 @@ class CategoryViewController: UITableViewController {
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layoutMargins = UIEdgeInsetsZero
+    }
+    
     @IBAction func exitModal(){
         let navigationController = self.parentViewController as! UINavigationController;
         navigationController.dismissViewControllerAnimated(true, completion: nil)

@@ -8,6 +8,7 @@
 
 
 import UIKit
+import QuartzCore
 
 class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     
@@ -44,6 +45,7 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     }
     
     func failedNewsParsing(error:NSError) {
+        self.refreshControl?.endRefreshing()
         RKDropdownAlert.title("Fehler", message: "Nachrichten konnten nicht geladen werden!" );
     }
 
@@ -73,6 +75,10 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layoutMargins = UIEdgeInsetsZero
     }
     
     @IBAction func showInfo(){
