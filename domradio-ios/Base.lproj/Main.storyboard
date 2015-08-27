@@ -134,7 +134,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Artikel zum Thema" id="p83-ls-8X7">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="TEO-Ea-xZa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="TEO-Ea-xZa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="exitModal" destination="Ilw-hH-tVh" id="7S4-XG-CLw"/>
