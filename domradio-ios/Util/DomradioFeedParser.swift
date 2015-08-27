@@ -19,8 +19,8 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     }
     
     func parseNews(){
-        var url = NSURL(string: link)
-        var feedParser = MWFeedParser(feedURL: url)
+        let url = NSURL(string: link)
+        let feedParser = MWFeedParser(feedURL: url)
         feedParser.delegate = self
         feedParser.connectionType = ConnectionTypeAsynchronously
         feedParser.parse()

@@ -53,7 +53,9 @@ class NewsDetailViewController: UIViewController, UIWebViewDelegate, NJKWebViewP
         super.didReceiveMemoryWarning()
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
+    
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         RKDropdownAlert.title("Netzwerkfehler", message: "Artikel konnte nicht geladen werden!" );
     }
     

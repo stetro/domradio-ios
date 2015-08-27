@@ -20,8 +20,8 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
             self.player?.delegate = self
         }
         if let audioPlayer = player{
-            if  (audioPlayer.state.value == STKAudioPlayerStateReady.value) ||
-                (audioPlayer.state.value == STKAudioPlayerStateStopped.value){
+            if  (audioPlayer.state == STKAudioPlayerStateReady) ||
+                (audioPlayer.state == STKAudioPlayerStateStopped){
                 audioPlayer.play(url)
             }else{
                 audioPlayer.stop()
@@ -41,10 +41,10 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     func updateView(){
         if let label = self.playerLabel, let button = self.playerButton{
             if let audioPlayer = player{
-                if(audioPlayer.state.value == STKAudioPlayerStateBuffering.value){
+                if(audioPlayer.state == STKAudioPlayerStateBuffering){
                     label.text = "Lädt ..."
                     button.imageView?.image = UIImage(named: "PauseButton")
-                }else if(audioPlayer.state.value == STKAudioPlayerStatePlaying.value){
+                }else if(audioPlayer.state == STKAudioPlayerStatePlaying){
                     label.text = "domradio.de Livestream"
                     button.imageView?.image = UIImage(named: "PauseButton")
                 }else{

@@ -80,7 +80,7 @@ class CategoryViewController: UITableViewController {
     var updatingCategoryCallback: ((String , String) -> ())?
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath)
         cell.textLabel!.text = topics[indexPath.item]
         if let selectedIndexPath = self.selectedIndexPath{
             if(indexPath.isEqual(selectedIndexPath)){
@@ -104,27 +104,27 @@ class CategoryViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let selectedIndexPath = self.selectedIndexPath{
-            var uncheckCell = self.tableView!.cellForRowAtIndexPath(selectedIndexPath)
+            let uncheckCell = self.tableView!.cellForRowAtIndexPath(selectedIndexPath)
             if let resolvedUncheckCell = uncheckCell{
                 resolvedUncheckCell.accessoryType = UITableViewCellAccessoryType.None;
             }
         }
-        var checkCell = self.tableView!.cellForRowAtIndexPath(indexPath)
+        let checkCell = self.tableView!.cellForRowAtIndexPath(indexPath)
         checkCell?.accessoryType = UITableViewCellAccessoryType.Checkmark
         self.selectedIndexPath = indexPath
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     @IBAction func exitModal(){
-        var navigationController = self.parentViewController as! UINavigationController;
+        let navigationController = self.parentViewController as! UINavigationController;
         navigationController.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func doneModal(){
-        var navigationController = self.parentViewController as! UINavigationController;
+        let navigationController = self.parentViewController as! UINavigationController;
         if let updatingCallback = self.updatingCategoryCallback{
-            var topic = topics[selectedIndexPath!.item]
-            var link = links[topics[selectedIndexPath!.item]]
+            let topic = topics[selectedIndexPath!.item]
+            let link = links[topics[selectedIndexPath!.item]]
             updatingCallback(topic, link!);
         }
         navigationController.dismissViewControllerAnimated(true, completion: updateSelectedData)
@@ -132,8 +132,8 @@ class CategoryViewController: UITableViewController {
     
     func updateSelectedData(){
         if let updatingCallback = self.updatingCategoryCallback{
-            var topic = topics[selectedIndexPath!.item]
-            var link = links[topics[selectedIndexPath!.item]]
+            let topic = topics[selectedIndexPath!.item]
+            let link = links[topics[selectedIndexPath!.item]]
             updatingCallback(topic, link!);
         }
     }

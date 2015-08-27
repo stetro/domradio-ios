@@ -29,7 +29,7 @@ class NewsTableViewCell: UITableViewCell {
     func fillNews(item:MWFeedItem){
         self.title!.text = item.title
         self.date!.text = "vom \(dateFormatter.stringFromDate(item.date))"
-        var summary = item.summary
+        let summary = item.summary
         self.news!.text = summary.stringByReplacingOccurrencesOfString("<[^>]+>", withString :"",  options: .RegularExpressionSearch, range: nil)
     }
 

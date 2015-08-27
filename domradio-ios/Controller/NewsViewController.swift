@@ -19,7 +19,7 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
         self.parser = DomradioFeedParser(target:self)
         self.title = parser?.title
         
-        var refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "loadNews:", forControlEvents: UIControlEvents.ValueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Zum Aktualisieren herunterziehen ...")
         self.refreshControl = refreshControl;
@@ -38,7 +38,7 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
         self.title = parser?.title
         self.items = items
         self.tableView.reloadSections(
-            NSIndexSet(indexesInRange: NSMakeRange(0, self.tableView.numberOfSections())),
+            NSIndexSet(indexesInRange: NSMakeRange(0, self.tableView.numberOfSections)),
             withRowAnimation: .None)
         self.tableView.setContentOffset(CGPointZero, animated: true)
     }
@@ -52,21 +52,21 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let identifier = segue.identifier{
+        if let _ = segue.identifier{
             if(segue.identifier! == "showNews"){
-                var detailController = segue.destinationViewController as! NewsDetailViewController
-                detailController.item = items[self.tableView.indexPathForSelectedRow()!.item]
+                let detailController = segue.destinationViewController as! NewsDetailViewController
+                detailController.item = items[self.tableView.indexPathForSelectedRow!.item]
             }
             if(segue.identifier! == "selectCategory"){
-                var detailController = segue.destinationViewController as! NavigationController
-                var categoryViewController = detailController.viewControllers.first as! CategoryViewController
+                let detailController = segue.destinationViewController as! NavigationController
+                let categoryViewController = detailController.viewControllers.first as! CategoryViewController
                 categoryViewController.updatingCategoryCallback = self.parser!.update
             }
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath) as! NewsTableViewCell
         cell.fillNews(items[indexPath.item])
         return cell
     }
@@ -76,8 +76,8 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
     }
     
     @IBAction func showInfo(){
-        var cv = UIViewController(nibName: "InfoView", bundle: nil)
-        var popup = KLCPopup(contentView: cv.view, showType: KLCPopupShowType.BounceIn, dismissType: KLCPopupDismissType.BounceOutToBottom, maskType: KLCPopupMaskType.Dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: true)
+        let cv = UIViewController(nibName: "InfoView", bundle: nil)
+        let popup = KLCPopup(contentView: cv.view, showType: KLCPopupShowType.BounceIn, dismissType: KLCPopupDismissType.BounceOutToBottom, maskType: KLCPopupMaskType.Dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: true)
         popup.show()
     }
 }
