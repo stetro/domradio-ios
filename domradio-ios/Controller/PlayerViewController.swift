@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     
@@ -27,7 +28,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
                 audioPlayer.stop()
             }
         }
-        updateView()
+        self.updateView()
     }
     
     var player:STKAudioPlayer?
@@ -35,7 +36,38 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView();
+        self.updateView()
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.becomeFirstResponder()
+        self.remoteControlText("domradio.de Livestream")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        self.resignFirstResponder()
+    }
+    
+    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+        NSLog("event received")
+        if let event = event{
+            if(event.type == UIEventType.RemoteControl){
+                switch(event.subtype){
+                case UIEventSubtype.RemoteControlPause:
+                    buttonPressed()
+                    break
+                case UIEventSubtype.RemoteControlPlay:
+                    buttonPressed()
+                    break
+                default:
+                    break
+                }
+            }
+        }
     }
     
     func updateView(){
@@ -55,7 +87,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
                 label.text = "domradio.de Livestream"
                 button.imageView?.image = UIImage(named: "PlayButton")
             }
-            
+            self.remoteControlText(label.text!)
         }
     }
 
@@ -80,5 +112,9 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
         self.updateView()
     }
     
-    
+    func remoteControlText(text:String){
+        var playingInfo = [String : AnyObject]()
+        playingInfo[MPMediaItemPropertyArtist] = text
+        MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = playingInfo
+    }
 }
