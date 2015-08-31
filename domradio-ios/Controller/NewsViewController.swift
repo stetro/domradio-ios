@@ -62,6 +62,7 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
             if(segue.identifier! == "showNews"){
                 let detailController = segue.destinationViewController as! NewsDetailViewController
                 detailController.item = items[self.tableView.indexPathForSelectedRow!.item]
+                self.tableView.deselectRowAtIndexPath(self.tableView.indexPathForSelectedRow!, animated: true)
             }
             if(segue.identifier! == "selectCategory"){
                 let detailController = segue.destinationViewController as! NavigationController
