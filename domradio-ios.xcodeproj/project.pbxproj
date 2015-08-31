@@ -21,7 +21,7 @@
 		E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5D1B39C14B00513759 /* NewsViewController.swift */; };
 		E45D7A601B39C1E400513759 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */; };
 		E4CAEF331B3D5C4400DF75C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CAEF321B3D5C4400DF75C9 /* MainViewController.swift */; };
-		E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DFC17B1B445737004C1F7E /* InfoView.xib */; };
+		E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DFC17B1B445737004C1F7E /* InfoView.xib */; settings = {ASSET_TAGS = (); }; };
 		E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6DF101B388DE700F00854 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +235,9 @@
 		E44DB43A1B388701002645E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Steffen Tröster";
