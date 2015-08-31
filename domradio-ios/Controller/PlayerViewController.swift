@@ -53,7 +53,6 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     }
     
     override func remoteControlReceivedWithEvent(event: UIEvent?) {
-        NSLog("event received")
         if let event = event{
             if(event.type == UIEventType.RemoteControl){
                 switch(event.subtype){
@@ -61,6 +60,9 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
                     buttonPressed()
                     break
                 case UIEventSubtype.RemoteControlPlay:
+                    buttonPressed()
+                    break
+                case UIEventSubtype.RemoteControlTogglePlayPause:
                     buttonPressed()
                     break
                 default:
