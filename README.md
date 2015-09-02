@@ -1,7 +1,7 @@
 # domradio-ios
 iOS [domradio.de](http://domradio.de) App 
 
-![Screenshot](screencast.gif)
+![Screenshot](screenshot.png)
 
 > There is also an [Android](https://github.com/stetro/domradio-android) implementation
 
