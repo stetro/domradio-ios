@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import NJKWebViewProgress
+import MWFeedParser
+import RKDropdownAlert
 
 class NewsDetailViewController: UIViewController, UIWebViewDelegate, NJKWebViewProgressDelegate {
     

@@ -16,6 +16,8 @@ PODS:
   - NJKWebViewProgress/ProgressView (0.2.3)
   - RKDropdownAlert (0.3.0)
   - StreamingKit (0.1.25)
+  - SwiftHTTP (0.9.5)
+  - SWXMLHash (1.1.0)
 
 DEPENDENCIES:
   - KLCPopup
@@ -23,6 +25,24 @@ DEPENDENCIES:
   - NJKWebViewProgress
   - RKDropdownAlert
   - StreamingKit
+  - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP.git`, branch `swift-2`)
+  - SWXMLHash (from `https://github.com/drmohundro/SWXMLHash.git`, branch `xcode-7.0`)
+
+EXTERNAL SOURCES:
+  SwiftHTTP:
+    :branch: swift-2
+    :git: https://github.com/daltoniam/SwiftHTTP.git
+  SWXMLHash:
+    :branch: xcode-7.0
+    :git: https://github.com/drmohundro/SWXMLHash.git
+
+CHECKOUT OPTIONS:
+  SwiftHTTP:
+    :commit: 8e501118a32572f26905ea24177c2040dcfff2af
+    :git: https://github.com/daltoniam/SwiftHTTP.git
+  SWXMLHash:
+    :commit: 050154bfc56032f04fcca37464693a17f897200a
+    :git: https://github.com/drmohundro/SWXMLHash.git
 
 SPEC CHECKSUMS:
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
@@ -30,5 +50,7 @@ SPEC CHECKSUMS:
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7
   StreamingKit: f00c054cfd0f59d88c8be7a2270e208302ce48c4
+  SwiftHTTP: cd7b248bc07db02926ff54cf19b580b78f7abfa1
+  SWXMLHash: 3937b867dfe3091a84304176d80399fc2e709c37
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

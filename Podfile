@@ -1,5 +1,6 @@
-# Uncomment this line to define a global platform for your project
-platform :ios, '7.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
 
 target 'domradio-ios' do
 	pod 'MWFeedParser'
@@ -7,9 +8,6 @@ target 'domradio-ios' do
     pod 'NJKWebViewProgress'
     pod 'StreamingKit'
     pod 'KLCPopup'
+    pod 'SwiftHTTP', :git => 'https://github.com/daltoniam/SwiftHTTP.git', :branch => 'swift-2'
+    pod 'SWXMLHash', :git => 'https://github.com/drmohundro/SWXMLHash.git', :branch => 'xcode-7.0'
 end
-
-target 'domradio-iosTests' do
-
-end
-

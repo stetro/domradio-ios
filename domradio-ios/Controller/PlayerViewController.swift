@@ -9,8 +9,10 @@
 import UIKit
 import AVFoundation
 import MediaPlayer
+import StreamingKit
+import RKDropdownAlert
 
-class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
+class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefresherDelegate {
     
     @IBOutlet var playerLabel:UILabel?
     @IBOutlet var playerButton:UIButton?
@@ -38,13 +40,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateView()
-        self.titleRefresher = TitleRefresher()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        if let titleRefresher = titleRefresher{
-            titleRefresher.stop()
-        }
+        self.titleRefresher = TitleRefresher(target: self)
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -128,4 +124,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
         MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = playingInfo
     }
     
+    func updateTitle(title:String){
+        print(title)
+    }
 }

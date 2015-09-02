@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Steffen Tröster. All rights reserved.
 //
 
+import MWFeedParser
+
 class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     
     var items = [MWFeedItem]()
