@@ -42,7 +42,6 @@
 		B5758DB2E2C29A2B2D37C565 /* Pods-domradio-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-domradio-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-domradio-ios/Pods-domradio-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D1F7C3D2F1EF46F8D4F60F1B /* Pods_domradio_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_domradio_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4130E111B39C91900732DAE /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = Controller/PlayerViewController.swift; sourceTree = "<group>"; };
-		E44988591B39D42500B8CDBA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Util/Bridging-Header.h"; sourceTree = "<group>"; };
 		E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParser.swift; path = Util/DomradioFeedParser.swift; sourceTree = "<group>"; };
 		E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DomradioFeedParserDelegate.swift; path = Util/DomradioFeedParserDelegate.swift; sourceTree = "<group>"; };
 		E44988601B3A854900B8CDBA /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsDetailViewController.swift; path = Controller/NewsDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				E49C48C61B974B6D000E2466 /* TitleRefresher.swift */,
-				E44988591B39D42500B8CDBA /* Bridging-Header.h */,
 				E449885A1B39D6BD00B8CDBA /* DomradioFeedParser.swift */,
 				E449885E1B39DAC900B8CDBA /* DomradioFeedParserDelegate.swift */,
 				E4BA21C01B975ECB00647BA4 /* TitleRefresherDelegate.swift */,

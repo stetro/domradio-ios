@@ -1,5 +1,6 @@
 PODS:
   - KLCPopup (1.0)
+  - MarqueeLabel (2.2.5)
   - MWFeedParser (1.0.1):
     - MWFeedParser/FeedParser (= 1.0.1)
     - MWFeedParser/NSDate+InternetDateTime (= 1.0.1)
@@ -21,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - KLCPopup
+  - MarqueeLabel
   - MWFeedParser
   - NJKWebViewProgress
   - RKDropdownAlert
@@ -46,6 +48,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  MarqueeLabel: 65ca60ee9ba554be34f35339004c6c9fe6366a31
   MWFeedParser: 2cf646014c1baf6ad1b08c480b40a08180079247
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   RKDropdownAlert: f4b3364c251829ad439dc666836a1f2dad26f4c7

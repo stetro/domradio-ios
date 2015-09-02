@@ -50,11 +50,7 @@ class TitleRefresher {
         let xml = SWXMLHash.parse(text)
         let title = xml["station"]["onair"]["title"].element?.text
         let artist = xml["station"]["onair"]["artist"].element?.text
-        let type = xml["station"]["onair"]["type"].element?.text
-        if let title = title, let artist = artist, let type = type{
-            if(type == "I") {
-                return
-            }
+        if let title = title, let artist = artist{
             if let target = self.target{
                 target.updateTitle("\(artist) - \(title)")
             }

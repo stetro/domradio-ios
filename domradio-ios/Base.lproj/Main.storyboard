@@ -45,11 +45,19 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artikel lesen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-30-ZJa">
+                                                    <rect key="frame" x="482" y="131" width="70" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="3ax-fq-zkA" secondAttribute="trailing" constant="8" id="0rs-Sp-YbZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="3ma-S6-luL" secondAttribute="bottom" constant="30" id="3sa-jo-HbL"/>
+                                                <constraint firstAttribute="trailing" secondItem="1y0-30-ZJa" secondAttribute="trailing" constant="8" id="CNH-dT-b9a"/>
+                                                <constraint firstAttribute="bottom" secondItem="1y0-30-ZJa" secondAttribute="bottom" constant="8" id="Pof-Mr-A8M"/>
                                                 <constraint firstItem="3ma-S6-luL" firstAttribute="leading" secondItem="Ixg-9I-ZDN" secondAttribute="leading" constant="8" id="Q3V-Fr-Iab"/>
                                                 <constraint firstAttribute="trailing" secondItem="3ma-S6-luL" secondAttribute="trailing" constant="8" id="VoN-dq-dSU"/>
                                                 <constraint firstItem="3ax-fq-zkA" firstAttribute="top" secondItem="Ixg-9I-ZDN" secondAttribute="top" constant="8" id="YEl-9c-Bup"/>
@@ -286,6 +294,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-df-mdy">
                                 <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="GO4-ZI-wXa"/>
+                                </constraints>
                                 <state key="normal" image="PlayButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -293,8 +304,22 @@
                                     <action selector="buttonPressed" destination="QYZ-kG-uXP" eventType="touchDown" id="edf-xD-JHA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="domradio.de Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHk-Du-iTw">
-                                <rect key="frame" x="64" y="20" width="186" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAX-KE-ds6" customClass="MarqueeLabel">
+                                <rect key="frame" x="68" y="34" width="504" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="domradio.de" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHk-Du-iTw">
+                                <rect key="frame" x="68" y="10" width="504" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -302,13 +327,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="thl-N7-G52" firstAttribute="top" secondItem="EPJ-df-mdy" secondAttribute="bottom" constant="10" id="Dbg-T7-y2B"/>
-                            <constraint firstItem="EPJ-df-mdy" firstAttribute="leading" secondItem="nCu-bE-HAi" secondAttribute="leadingMargin" id="MPF-Ao-fh6"/>
-                            <constraint firstItem="EPJ-df-mdy" firstAttribute="top" secondItem="ZCW-kk-OBO" secondAttribute="bottom" constant="10" id="aBs-pr-weZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WHk-Du-iTw" secondAttribute="trailing" id="0wQ-39-H8g"/>
+                            <constraint firstItem="thl-N7-G52" firstAttribute="top" secondItem="vAX-KE-ds6" secondAttribute="bottom" constant="10" id="0y3-rR-8Vc"/>
+                            <constraint firstItem="thl-N7-G52" firstAttribute="top" secondItem="EPJ-df-mdy" secondAttribute="bottom" constant="10" id="30r-iN-fRf"/>
+                            <constraint firstItem="vAX-KE-ds6" firstAttribute="leading" secondItem="EPJ-df-mdy" secondAttribute="trailing" constant="8" id="7NR-Fe-YnW"/>
+                            <constraint firstItem="WHk-Du-iTw" firstAttribute="top" secondItem="ZCW-kk-OBO" secondAttribute="bottom" constant="10" id="Mu0-uZ-g9h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="EPJ-df-mdy" secondAttribute="leading" id="OPE-gO-9oz"/>
+                            <constraint firstItem="EPJ-df-mdy" firstAttribute="top" secondItem="ZCW-kk-OBO" secondAttribute="bottom" constant="10" id="dia-HT-1Cf"/>
+                            <constraint firstItem="WHk-Du-iTw" firstAttribute="leading" secondItem="EPJ-df-mdy" secondAttribute="trailing" constant="8" id="mqW-Bh-QBi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vAX-KE-ds6" secondAttribute="trailing" id="yCr-nZ-r8Z"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playerButton" destination="EPJ-df-mdy" id="DZw-p4-fxD"/>
+                        <outlet property="playerInfoLabel" destination="vAX-KE-ds6" id="SpZ-T3-3tr"/>
                         <outlet property="playerLabel" destination="WHk-Du-iTw" id="39v-TH-hi7"/>
                     </connections>
                 </viewController>

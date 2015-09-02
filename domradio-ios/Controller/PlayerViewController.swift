@@ -11,11 +11,13 @@ import AVFoundation
 import MediaPlayer
 import StreamingKit
 import RKDropdownAlert
+import MarqueeLabel
 
 class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefresherDelegate {
     
     @IBOutlet var playerLabel:UILabel?
     @IBOutlet var playerButton:UIButton?
+    @IBOutlet var playerInfoLabel:MarqueeLabel?
     
     @IBAction func buttonPressed(){
         if player == nil {
@@ -39,6 +41,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.updateView()
         self.titleRefresher = TitleRefresher(target: self)
     }
@@ -125,6 +128,10 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
     }
     
     func updateTitle(title:String){
-        print(title)
+        if let playerInfoLabel = self.playerInfoLabel{
+            dispatch_async(dispatch_get_main_queue()) {
+                playerInfoLabel.text = title
+            }
+        }
     }
 }
