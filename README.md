@@ -13,6 +13,9 @@ Used Libraries
 * NJKWebViewProgress - https://github.com/ninjinkun/NJKWebViewProgress
 * KLCPopup - https://github.com/jmascia/KLCPopup
 * MWFeedParser - https://github.com/mwaterfall/MWFeedParser
+* MarqueeLabel - https://github.com/cbpowell/MarqueeLabel
+* SwiftHTTP - https://github.com/daltoniam/SwiftHTTP
+* SWXMLHash - https://github.com/drmohundro/SWXMLHash
 
 License
 -------
