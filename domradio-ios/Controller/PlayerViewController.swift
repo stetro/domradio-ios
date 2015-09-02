@@ -19,6 +19,10 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
     @IBOutlet var playerButton:UIButton?
     @IBOutlet var playerInfoLabel:MarqueeLabel?
     
+    let url = "http://domradio-mp3-m.akacast.akamaistream.net/7/148/237368/v1/gnl.akacast.akamaistream.net/domradio-mp3-m"
+    let defaultPlayerState = "domradio.de Livestream"
+    let defaultPlayerTitle = "Der gute Draht nach oben. - domradio.de"
+    
     @IBAction func buttonPressed(){
         if player == nil {
             self.player = STKAudioPlayer()
@@ -37,11 +41,14 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
     
     var player:STKAudioPlayer?
     var titleRefresher:TitleRefresher?
-    let url = "http://domradio-mp3-m.akacast.akamaistream.net/7/148/237368/v1/gnl.akacast.akamaistream.net/domradio-mp3-m"
+    var playerState:String?
+    var playerTitle:String?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.playerState = self.defaultPlayerState
+        self.playerTitle = self.defaultPlayerTitle
         self.updateView()
         self.titleRefresher = TitleRefresher(target: self)
     }
@@ -52,7 +59,7 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
     
     override func viewDidAppear(animated: Bool) {
         self.becomeFirstResponder()
-        self.remoteControlText("domradio.de Livestream")
+        self.remoteControlText()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -83,20 +90,21 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
         if let label = self.playerLabel, let button = self.playerButton{
             if let audioPlayer = player{
                 if(audioPlayer.state == STKAudioPlayerStateBuffering){
-                    label.text = "Lädt ..."
+                    self.playerState = "Lädt ..."
                     button.imageView?.image = UIImage(named: "PauseButton")
                 }else if(audioPlayer.state == STKAudioPlayerStatePlaying){
-                    label.text = "domradio.de Livestream"
+                    self.playerState = self.defaultPlayerState
                     button.imageView?.image = UIImage(named: "PauseButton")
                 }else{
-                    label.text = "domradio.de Livestream"
+                    self.playerState = self.defaultPlayerState
                     button.imageView?.image = UIImage(named: "PlayButton")
                 }
             }else{
-                label.text = "domradio.de Livestream"
+                self.playerState = self.defaultPlayerState
                 button.imageView?.image = UIImage(named: "PlayButton")
             }
-            self.remoteControlText(label.text!)
+            label.text = self.playerState!
+            self.remoteControlText()
         }
     }
 
@@ -121,9 +129,10 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
         self.updateView()
     }
     
-    func remoteControlText(text:String){
+    func remoteControlText(){
         var playingInfo = [String : AnyObject]()
-        playingInfo[MPMediaItemPropertyArtist] = text
+        playingInfo[MPMediaItemPropertyTitle] = self.playerState!
+        playingInfo[MPMediaItemPropertyArtist] = self.playerTitle!
         MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = playingInfo
     }
     
@@ -132,6 +141,8 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate, TitleRefre
             dispatch_async(dispatch_get_main_queue()) {
                 playerInfoLabel.text = title
             }
+            self.playerTitle = title
+            remoteControlText()
         }
     }
 }

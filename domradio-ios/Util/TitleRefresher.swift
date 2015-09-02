@@ -20,7 +20,7 @@ class TitleRefresher {
     
     init(target:TitleRefresherDelegate){
         self.target = target
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(10.0,
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(20.0,
             target: self,
             selector: "loadTitle",
             userInfo: nil,
@@ -52,9 +52,19 @@ class TitleRefresher {
         let artist = xml["station"]["onair"]["artist"].element?.text
         if let title = title, let artist = artist{
             if let target = self.target{
-                target.updateTitle("\(artist) - \(title)")
+                target.updateTitle("\(self.flipArtist(artist)) - \(title)")
             }
         }
+    }
+    
+    func flipArtist(str:String) -> String{
+        if(str.containsString(",")){
+            let range = str.rangeOfString(",")!
+            let first = str.substringToIndex(range.startIndex)
+            let last = str.substringFromIndex(range.endIndex)
+            return "\(last) \(first)"
+        }
+        return str
     }
     
     func stop(){
