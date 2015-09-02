@@ -32,11 +32,19 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
     }
     
     var player:STKAudioPlayer?
+    var titleRefresher:TitleRefresher?
     let url = "http://domradio-mp3-m.akacast.akamaistream.net/7/148/237368/v1/gnl.akacast.akamaistream.net/domradio-mp3-m"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateView()
+        self.titleRefresher = TitleRefresher()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        if let titleRefresher = titleRefresher{
+            titleRefresher.stop()
+        }
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -119,4 +127,5 @@ class PlayerViewController: UIViewController, STKAudioPlayerDelegate {
         playingInfo[MPMediaItemPropertyArtist] = text
         MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = playingInfo
     }
+    
 }
