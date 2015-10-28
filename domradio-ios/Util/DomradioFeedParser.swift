@@ -14,7 +14,7 @@ class DomradioFeedParser : NSObject, MWFeedParserDelegate{
     var target:DomradioFeedParserDelegate
     
     var title = "domradio.de"
-    var link = "http://www.domradio.de/rss-feeds/domradio-rss.xml"
+    var link = "https://www.domradio.de/rss-feeds/domradio-rss.xml"
     
     init(target:DomradioFeedParserDelegate){
         self.target = target

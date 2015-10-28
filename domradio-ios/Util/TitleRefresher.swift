@@ -13,7 +13,7 @@ import SwiftHTTP
 
 class TitleRefresher {
     
-    let url = "http://www.domradio.de/sites/all/themes/domradio/playlist/Export.xml"
+    let url = "https://www.domradio.de/sites/all/themes/domradio/playlist/Export.xml"
 
     var timer:NSTimer?
     var target:TitleRefresherDelegate?
