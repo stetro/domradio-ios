@@ -99,7 +99,7 @@ class NewsViewController: UITableViewController, DomradioFeedParserDelegate {
         let view = cv.view
         let popup = KLCPopup(contentView: view, showType: KLCPopupShowType.BounceIn, dismissType: KLCPopupDismissType.BounceOutToBottom, maskType: KLCPopupMaskType.Dimmed, dismissOnBackgroundTouch: true, dismissOnContentTouch: false)
         let domradio = view.viewWithTag(3) as! UIButton // domradio.de Button
-        let close = view.viewWithTag(4) as! UIButton// Close Button
+        let close = view.viewWithTag(4) as! UIButton // Close Button
         close.addTarget(popup, action: "dismiss", forControlEvents: UIControlEvents.TouchUpInside)
         domradio.addTarget(self, action: "openDomradioDe", forControlEvents: UIControlEvents.TouchUpInside)
         popup.show()

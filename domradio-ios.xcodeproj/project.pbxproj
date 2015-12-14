@@ -19,8 +19,8 @@
 		E44DB45E1B388701002645E6 /* domradio_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB45D1B388701002645E6 /* domradio_iosTests.swift */; };
 		E45D7A5E1B39C14B00513759 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5D1B39C14B00513759 /* NewsViewController.swift */; };
 		E45D7A601B39C1E400513759 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45D7A5F1B39C1E400513759 /* NewsTableViewCell.swift */; };
-		E49C48C71B974B6D000E2466 /* TitleRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C48C61B974B6D000E2466 /* TitleRefresher.swift */; settings = {ASSET_TAGS = (); }; };
-		E4BA21C11B975ECB00647BA4 /* TitleRefresherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA21C01B975ECB00647BA4 /* TitleRefresherDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		E49C48C71B974B6D000E2466 /* TitleRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C48C61B974B6D000E2466 /* TitleRefresher.swift */; };
+		E4BA21C11B975ECB00647BA4 /* TitleRefresherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BA21C01B975ECB00647BA4 /* TitleRefresherDelegate.swift */; };
 		E4CAEF331B3D5C4400DF75C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CAEF321B3D5C4400DF75C9 /* MainViewController.swift */; };
 		E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DFC17B1B445737004C1F7E /* InfoView.xib */; };
 		E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6DF101B388DE700F00854 /* NavigationController.swift */; };
