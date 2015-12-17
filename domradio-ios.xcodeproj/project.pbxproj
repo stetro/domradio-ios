@@ -24,7 +24,7 @@
 		E4CAEF331B3D5C4400DF75C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CAEF321B3D5C4400DF75C9 /* MainViewController.swift */; };
 		E4DFC17C1B445737004C1F7E /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DFC17B1B445737004C1F7E /* InfoView.xib */; };
 		E4F6DF111B388DE700F00854 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F6DF101B388DE700F00854 /* NavigationController.swift */; };
-		F7EB616BD44781E08F756B13 /* Pods_domradio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F7C3D2F1EF46F8D4F60F1B /* Pods_domradio_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F7EB616BD44781E08F756B13 /* Pods_domradio_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F7C3D2F1EF46F8D4F60F1B /* Pods_domradio_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,7 +249,7 @@
 				TargetAttributes = {
 					E44DB4411B388701002645E6 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = L5Q8U726N7;
+						DevelopmentTeam = H8TAS569U2;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -502,7 +502,7 @@
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.domradio.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.domradio.app;
 				PRODUCT_NAME = domradio.de;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -519,7 +519,7 @@
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.domradio.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.domradio.app;
 				PRODUCT_NAME = domradio.de;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
