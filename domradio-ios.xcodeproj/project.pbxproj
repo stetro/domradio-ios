@@ -497,8 +497,8 @@
 			baseConfigurationReference = B5758DB2E2C29A2B2D37C565 /* Pods-domradio-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bildungswerk der Erzdioezese Koeln e.V. (H8TAS569U2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bildungswerk der Erzdioezese Koeln e.V. (H8TAS569U2)";
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,8 +514,8 @@
 			baseConfigurationReference = 631A36D4B33229FE64D50558 /* Pods-domradio-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bildungswerk der Erzdioezese Koeln e.V. (H8TAS569U2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bildungswerk der Erzdioezese Koeln e.V. (H8TAS569U2)";
 				INFOPLIST_FILE = "domradio-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

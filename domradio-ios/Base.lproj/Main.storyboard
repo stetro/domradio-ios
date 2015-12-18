@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPn-dr-V8U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fPn-dr-V8U">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -11,42 +11,42 @@
             <objects>
                 <tableViewController id="YX3-4e-hbI" customClass="NewsViewController" customModule="domradio_de" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="187" sectionHeaderHeight="22" sectionFooterHeight="22" id="zL3-JR-gTc">
-                        <rect key="frame" x="0.0" y="0.0" width="592" height="540"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="187" id="DDD-ZF-UIe" customClass="NewsTableViewCell" customModule="domradio_de" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="592" height="187"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DDD-ZF-UIe" id="DZO-bm-6wf">
-                                    <rect key="frame" x="0.0" y="0.0" width="592" height="186"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="viewContainer" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-9I-ZDN">
-                                            <rect key="frame" x="16" y="16" width="560" height="154"/>
+                                            <rect key="frame" x="16" y="16" width="568" height="154"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="760" verticalHuggingPriority="760" horizontalCompressionResistancePriority="760" verticalCompressionResistancePriority="760" restorationIdentifier="title" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ax-fq-zkA" userLabel="Title">
-                                                    <rect key="frame" x="8" y="8" width="544" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="552" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.71764705880000002" green="0.1450980392" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="761" verticalHuggingPriority="761" horizontalCompressionResistancePriority="761" verticalCompressionResistancePriority="761" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-d1-ELY" userLabel="Date">
-                                                    <rect key="frame" x="8" y="33" width="544" height="15"/>
+                                                    <rect key="frame" x="8" y="33" width="552" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="752" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ma-S6-luL" userLabel="News">
-                                                    <rect key="frame" x="8" y="52" width="544" height="16"/>
+                                                    <rect key="frame" x="8" y="52" width="552" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artikel lesen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-30-ZJa">
-                                                    <rect key="frame" x="482" y="131" width="70" height="15"/>
+                                                    <rect key="frame" x="490" y="131" width="70" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -179,26 +179,26 @@
                         <viewControllerLayoutGuide type="bottom" id="3Xt-2x-Mzi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iuF-SX-qq5">
-                        <rect key="frame" x="0.0" y="0.0" width="592" height="540"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMx-28-Wai">
-                                <rect key="frame" x="4" y="64" width="584" height="476"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tcz-RT-TM8">
-                                <rect key="frame" x="4" y="64" width="584" height="2"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
                                 <color key="progressTintColor" red="0.61568627450000002" green="0.0" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMx-28-Wai">
+                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="PMx-28-Wai" secondAttribute="trailing" constant="-16" id="A3P-Ay-zE6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tcz-RT-TM8" secondAttribute="trailing" constant="-16" id="CZK-su-73i"/>
-                            <constraint firstItem="PMx-28-Wai" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leadingMargin" constant="-16" id="Ey0-72-6nZ"/>
+                            <constraint firstItem="Tcz-RT-TM8" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leading" id="4NL-Tz-PHf"/>
                             <constraint firstItem="Tcz-RT-TM8" firstAttribute="top" secondItem="ovH-QQ-NpZ" secondAttribute="bottom" id="LLR-8M-1QR"/>
-                            <constraint firstItem="Tcz-RT-TM8" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leadingMargin" constant="-16" id="cM3-Al-stE"/>
+                            <constraint firstAttribute="trailing" secondItem="PMx-28-Wai" secondAttribute="trailing" id="gw0-ma-UCz"/>
                             <constraint firstItem="3Xt-2x-Mzi" firstAttribute="top" secondItem="PMx-28-Wai" secondAttribute="bottom" id="iOr-NF-7fW"/>
+                            <constraint firstAttribute="trailing" secondItem="Tcz-RT-TM8" secondAttribute="trailing" id="rI0-iR-mxJ"/>
+                            <constraint firstItem="PMx-28-Wai" firstAttribute="leading" secondItem="iuF-SX-qq5" secondAttribute="leading" id="sMF-oh-OEW"/>
                             <constraint firstItem="PMx-28-Wai" firstAttribute="top" secondItem="ovH-QQ-NpZ" secondAttribute="bottom" id="z5T-XR-222"/>
                         </constraints>
                     </view>
@@ -249,13 +249,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68x-Or-XEk">
-                                <rect key="frame" x="4" y="0.0" width="592" height="540"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                                 <connections>
                                     <segue destination="twS-lu-uYA" kind="embed" id="NMQ-Ly-6db"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGH-AQ-UGf">
-                                <rect key="frame" x="4" y="540" width="592" height="60"/>
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="YTO-hO-lJv"/>
                                 </constraints>
@@ -266,11 +266,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="68x-Or-XEk" firstAttribute="leading" secondItem="gY9-Fd-Rak" secondAttribute="leadingMargin" constant="-16" id="1KP-sl-JLS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="68x-Or-XEk" secondAttribute="trailing" constant="-16" id="BNP-kQ-UFE"/>
                             <constraint firstItem="fId-7o-mxw" firstAttribute="top" secondItem="PGH-AQ-UGf" secondAttribute="bottom" id="QOG-YD-Lh9"/>
-                            <constraint firstItem="PGH-AQ-UGf" firstAttribute="leading" secondItem="gY9-Fd-Rak" secondAttribute="leadingMargin" constant="-16" id="iCE-uo-U9g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PGH-AQ-UGf" secondAttribute="trailing" constant="-16" id="j8s-MB-LSJ"/>
+                            <constraint firstAttribute="trailing" secondItem="PGH-AQ-UGf" secondAttribute="trailing" id="WXT-HI-RwT"/>
+                            <constraint firstAttribute="trailing" secondItem="68x-Or-XEk" secondAttribute="trailing" id="ZUx-Wi-jMw"/>
+                            <constraint firstItem="PGH-AQ-UGf" firstAttribute="leading" secondItem="gY9-Fd-Rak" secondAttribute="leading" id="flK-JN-xaW"/>
+                            <constraint firstItem="68x-Or-XEk" firstAttribute="leading" secondItem="gY9-Fd-Rak" secondAttribute="leading" id="ijr-j4-zCH"/>
                             <constraint firstItem="68x-Or-XEk" firstAttribute="top" secondItem="jnK-an-HGL" secondAttribute="bottom" constant="-20" id="tEe-9P-J8z"/>
                             <constraint firstItem="PGH-AQ-UGf" firstAttribute="top" secondItem="68x-Or-XEk" secondAttribute="bottom" id="uLs-Yc-od5"/>
                         </constraints>
@@ -289,7 +289,7 @@
                         <viewControllerLayoutGuide type="bottom" id="thl-N7-G52"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nCu-bE-HAi">
-                        <rect key="frame" x="0.0" y="0.0" width="592" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-df-mdy">
@@ -305,7 +305,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Livestream" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAX-KE-ds6" customClass="MarqueeLabel">
-                                <rect key="frame" x="68" y="34" width="504" height="16"/>
+                                <rect key="frame" x="68" y="34" width="512" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -319,7 +319,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="domradio.de" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHk-Du-iTw">
-                                <rect key="frame" x="68" y="10" width="504" height="21"/>
+                                <rect key="frame" x="68" y="10" width="512" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
